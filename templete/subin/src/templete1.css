@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'batang';
+    src: url('../font/BareunBatangOTFPro-3.otf') format('opentype');
+}
+
+.templete1{
+    background-image: url('../img/bgi.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: bisque;
+    width: 500px;
+    height: 800px;
+    padding: 50px;
+}
+
+.title{
+    color: red;
+    text-shadow: -3px 0px white, 0px 3px white, 3px 0px white, 0px -3px white;
+    font-family: 'batang';
+    margin-top: 0px;
+    text-align: center;
+    font-size: 100px;
+}
+.left{
+    width: 50%;
+    float: left;
+}
+.right{
+    width: 50%;
+    text-align: end;
+    float: right;
+}
