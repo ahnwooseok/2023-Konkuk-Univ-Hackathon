@@ -10,7 +10,7 @@ const BarcodeItemScreen = () => {
     setImageUrl(canvas.toDataURL('image/png'))
   }, [])
 
-  return <div>{imageUrl && <img src={imageUrl} />}</div>
+  return <div className='barcode'>{imageUrl && <img src={imageUrl} />}</div>
 }
 
 export default BarcodeItemScreen

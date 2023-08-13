@@ -31,8 +31,9 @@ export default function Templete1() {
                 <p id="content8">본문내용3</p>
                 <p id="content9">본문내용4</p>
                 <p id="content10">본문내용5</p>
-                <BarcodeItemScreen/>
+               
             </div>
+            <BarcodeItemScreen/>
         </div>
     </body>
 </html>

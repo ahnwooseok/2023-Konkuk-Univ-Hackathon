@@ -30,6 +30,14 @@
     font-family: 'titleml';
     src: url('../font/Pwkstmbo.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'classic';
+    src: url('../font/Cafe24Classictype-v1.1.otf') format('opentype');
+}
+@font-face {
+    font-family: 'chosunB';
+    src: url('../font/ChosunBg.TTF') format('truetype');
+}
 .templete1 {
     box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
     position: relative;
@@ -54,14 +62,15 @@
     filter: sepia(50%);
     z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
 }
-p{
-    margin: 10px;
+.templete1 p{
+    margin: 5px;
 }
 .title{
     color: red;
     text-shadow: -3px 0px white, 0px 3px white, 3px 0px white, 0px -3px white;
     font-family: 'batang';
     margin-top: 0px;
+    margin-bottom: 0px;
     text-align: center;
     font-size: 76px;
 }
@@ -73,9 +82,9 @@ p{
 }
 .right{
     
-
-   position: relative;
-   top:20px;
+    bottom: 50px;
+   position: absolute;
+    right: 20px;
     width: 50%;
     text-align: end;
     float: right;
