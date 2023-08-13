@@ -17,9 +17,11 @@ from azure.cognitiveservices.vision.face.models import TrainingStatusType, Perso
 
 # This key will serve all examples in this document.
 KEY = os.environ["VISION_KEY"]
+# KEY = os.environ["64a6a629b53b4674abc950ff222df14a"]
 
 # This endpoint will be used in all examples in this quickstart.
 ENDPOINT = os.environ["VISION_ENDPOINT"]
+# ENDPOINT = os.environ["https://peter1.cognitiveservices.azure.com/"]
 
 # Base url for the Verify and Facelist/Large Facelist operations
 IMAGE_BASE_URL = 'https://raw.githubusercontent.com/Azure-Samples/cognitive-services-sample-data-files/master/Face/images/'
