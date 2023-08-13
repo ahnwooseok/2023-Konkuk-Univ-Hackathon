@@ -91,6 +91,7 @@ def imgDetector(img,cascade,age_net,gender_net,MODEL_MEAN_VALUES,age_list,gender
     cv2.waitKey(10000)
 
 # 얼굴 탐지 모델 가중치
+
 cascade_filename = 'haarcascade_frontalface_alt.xml'
 # 모델 불러오기
 cascade = cv2.CascadeClassifier(cascade_filename)
