@@ -7,7 +7,7 @@ client_id = "xicwzp6vki"
 client_secret = "tPFwYJatuOV77BYLaKGNuKHkWpJDpxEimNthSm6s"
 url = "https://naveropenapi.apigw.ntruss.com/vision/v1/face"
 # files = {'image': open('YOUR_FILE_NAME', 'rb')}
-file_url = "/Users/ahnwooseok/Downloads/github/2023-Konkuk-Univ-Hackathon/CLOVA Face Recognition(CFR)/sample11.jpeg"
+file_url = "/Users/ahnwooseok/Downloads/github/2023-Konkuk-Univ-Hackathon/CLOVA Face Recognition(CFR)/sample12.jpeg"
 
 
 files = {'image': open(file_url, 'rb')}
