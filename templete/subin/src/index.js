@@ -11,6 +11,7 @@ import Templete5 from './component/templete5'
 import Templete6 from './component/templete6'
 import Main from './component/index'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import FileUploadExample from "./utils/FileUploadExample";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,7 @@ root.render(
   <Route path="/4"  element={<Templete4/>}></Route>
   <Route path="/5"  element={<Templete5/>}></Route>
   <Route path="/6"  element={<Templete6/>}></Route>
+    <Route path="/fileUpload"  element={<FileUploadExample/>}></Route>
   </Routes>
   </Router>
 );
