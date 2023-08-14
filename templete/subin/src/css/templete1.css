@@ -40,19 +40,26 @@
 }
 #main-title{
     text-align: center;
-    font-size: 100px;
-    margin: 0;
-    margin-left: 15%;
-   position: absolute;
+    font-size: 40px;
+   
+   padding-top: 40px;
     display: block;
     
 }
+#main-subtitle{
+    width: 80%;
+    display: block;
+    margin: 0 auto 0 auto;
+}
 .main-left{
     margin: 0;
-    height: 500px;
+    height: 600px;
     background-color: #F6F6F6;
     float: left;
-    width: 400px;
+    border-radius: 20px;
+    margin-top: 100px;
+    width: 500px;
+    margin-left: 50px;
 
 }
 .main-right{
@@ -69,56 +76,66 @@
     padding-top: 50px;
     float: left;
     margin: 0px auto 0 auto;
+    margin-left: 20px;
+   
 }
 .upload{
     color: white;
+    overflow: auto;
     font-size: 24px;
     line-height: 50px;
     height: 50px;
-   
-    margin: 50px auto 0px auto;
     width: 200px;
+   float: right;
+    margin-top: 50px;
+    margin-right: 20px;
     border-radius: 10px;
-    background-color:#07BC5D;
+    background-color:#666666;
+    
 }
 .camera{
     color: white;
     height: 50px;
-   
+    overflow: auto;
     font-size: 24px;
     line-height: 50px;
-    margin: 10px auto 50px auto;
+    margin-top: 10px;
     width: 200px;
+    float: right;
+    margin-right: 20px;
     border-radius: 10px;
-    background-color:#07BC5D;
+    background-color:#666666;
 }
 #upload{
-    margin-left: 5px;
+    margin-left: 30px;
     margin-right: 10px;
 }
 #camera{
-    margin-left: 10px;
+    margin-left: 35px;
     margin-right: 10px;
 }
+.child{
+    margin-right: 50px;
+}
 .file{
-   
-    margin: 200px auto 0 auto;
+   overflow: auto;
+    margin: 50px auto 0 auto;
     background-color: white;
     border-radius: 20px;
-    width: 350px;
+    width: 80%;
     height: 200px;
 }
-#converbtn{
-    border-radius: 20px;
-    padding: 30px;
-    background-color: white;
-    box-shadow:  10px 10px 10px rgba(28, 0, 0, 0.5);
-   cursor: pointer;
-    position: fixed;
-    top:50%;
-    left: 46.5%;
-z-index: 100;
-   
+.converbtn{
+    background-color:#07BC5D;
+    color:white;
+    font-size: 32px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
 }
 .index{
 position: relative;
