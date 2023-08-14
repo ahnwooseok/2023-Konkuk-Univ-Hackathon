@@ -9,11 +9,11 @@ import faceid from "../img/faceid.png"
 import upload from "../img/upload.png"
 import camera from "../img/camera.png"
 import time from '../img/time.png'
-export default function index() {
+export default function Index() {
     const templates = [Template1, Template2, Template3, Template4, Template5];
     const randomIndex = Math.floor(Math.random() * templates.length);
     const RandomTemplate = templates[randomIndex];
-  
+    const [selectedGender, setSelectedGender] = useState("");
     return (
       <div className='index'>
         <h1 id="main-title">Retro Magazine Converter</h1>
