@@ -63,9 +63,10 @@
 
 }
 .main-right{
+    padding-top: 100px;
     height: 100vh;
     float: right;
-    width: 50%;
+    width: 65%;
 }
 .main-right:after{
     background-color: #ECECEC;
@@ -115,7 +116,9 @@
     margin-right: 10px;
 }
 .child{
+    margin-top: 0;
     margin-right: 50px;
+    zoom: -100;
 }
 .file{
    overflow: auto;
@@ -124,6 +127,9 @@
     border-radius: 20px;
     width: 80%;
     height: 200px;
+}
+.marquee{
+   
 }
 .converbtn{
     background-color:#07BC5D;
@@ -147,7 +153,7 @@ position: relative;
     width: 400px;
     height: 500px;
     padding: 20px;
-    margin: 200px auto 0 auto;
+    margin: 50px auto 0 auto;
 }
 
 .templete1:before {
