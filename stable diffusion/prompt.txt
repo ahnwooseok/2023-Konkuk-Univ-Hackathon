@@ -1,0 +1,5 @@
+(((city))) background, very high detailing, sharp focus, natural lighting, (((photorealistic))), octane render, HDR, 8k, high contrast
+((unrealistic)), ((cartoon)), digital art, (bad anatomy), deformed body parts, low quality, worst quality, ((bad hands)), blur
+
+(((modern city, only))) background, very high detailing, sharp focus, natural lighting, (((photorealistic))), octane render, HDR, 8k, high contrast
+((unrealistic)), ((cartoon)), digital art, (bad anatomy), deformed body parts, low quality, worst quality, ((bad hands)), blur, people, ((no hair))
