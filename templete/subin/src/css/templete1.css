@@ -38,13 +38,100 @@
     font-family: 'chosunB';
     src: url('../font/ChosunBg.TTF') format('truetype');
 }
+#main-title{
+    text-align: center;
+    font-size: 100px;
+    margin: 0;
+    margin-left: 15%;
+   position: absolute;
+    display: block;
+    
+}
+.main-left{
+    margin: 0;
+    height: 100vh;
+    background-color: #07BC5D;
+    float: left;
+    width: 50%;
+
+}
+.main-right{
+    height: 100vh;
+    float: right;
+    width: 50%;
+}
+.main-right:after{
+
+   
+    background-color: #ECECEC;
+   
+}
+#faceid{
+    display: block;
+    padding-top: 70px;
+    margin: 0px auto 0 auto;
+}
+.upload{
+    color: white;
+    font-size: 24px;
+    line-height: 50px;
+    height: 50px;
+   
+    margin: 50px auto 0px auto;
+    width: 250px;
+    border-radius: 10px;
+    background-color:#07BC5D;
+}
+.camera{
+    color: white;
+    height: 50px;
+   
+    font-size: 24px;
+    line-height: 50px;
+    margin: 10px auto 50px auto;
+    width: 250px;
+    border-radius: 10px;
+    background-color:#07BC5D;
+}
+#upload{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+#camera{
+    margin-left: 45px;
+    margin-right: 10px;
+}
+.file{
+   
+    margin: 200px auto 0 auto;
+    background-color: #f6f6f6;
+    border-radius: 20px;
+    width: 400px;
+    height: 450px;
+}
+#converbtn{
+    border-radius: 20px;
+    padding: 30px;
+    background-color: white;
+    box-shadow:  10px 10px 10px rgba(28, 0, 0, 0.5);
+   cursor: pointer;
+    position: fixed;
+    top:50%;
+    left: 46.5%;
+z-index: 100;
+   
+}
+.index{
+position: relative;
+}
 .templete1 {
-    box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
+    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
+   
     position: relative;
     width: 400px;
     height: 500px;
     padding: 20px;
-    margin: 50px auto 0 auto;
+    margin: 200px auto 0 auto;
 }
 
 .templete1:before {

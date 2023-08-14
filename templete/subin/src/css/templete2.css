@@ -1,10 +1,11 @@
 .templete2 {
-    box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
+    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
+   
     position: relative;
     width: 400px;
     height: 500px;
     padding: 20px;
-    margin: 50px auto 0 auto;
+    margin: 200px auto 0 auto;
 }
 
 .templete2:before {
