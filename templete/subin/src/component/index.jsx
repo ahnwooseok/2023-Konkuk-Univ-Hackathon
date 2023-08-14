@@ -22,8 +22,8 @@ export default function index() {
         <div className='main-left'>
             <div className='file'>
                 <img src={faceid} id="faceid"></img>
-                <div className='upload'><img id="upload"src={upload}></img>파일 업로드하기</div>
-                <div className='camera'><img id="camera"src={camera}></img>사진 촬영하기</div>
+                <div className='upload'><img id="upload"src={upload}></img>파일 업로드</div>
+                <div className='camera'><img id="camera"src={camera}></img>사진 촬영</div>
             </div>
         </div>
         </div>
