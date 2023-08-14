@@ -1,10 +1,12 @@
 import {useState} from "react";
 import Webcam from "react-webcam";
+import {Dialog} from "@mui/material";
 
 export default function CameraUploadExample() {
 
 
     const [imageSrc, setImageSrc] = useState(null)
+    const [cameraModalOpen, setCameraModalOpen] = useState(false)
 
     const videoConstraints = {
         width: 1280,
@@ -39,11 +41,33 @@ export default function CameraUploadExample() {
         <div className='index'>
             <div style={{fontSize:"20px"}} id="main-title">카메라 업로드 test</div>
             <div style={{height:"40px"}}/>
-            {WebcamCapture()}
+            <div
+                style={{border:"1px solid red", padding:"10px 20px", cursor:"pointer", width:"fit-content"}}
+                onClick={()=>{
+                    setCameraModalOpen(true)
+                }}
+            >
+                모달열기
+            </div>
 
             <div>
                 <img src={imageSrc}/>
             </div>
+
+            <Dialog
+                open={cameraModalOpen}
+                onClose={()=>{setCameraModalOpen(false)}}
+                PaperProps={{
+                    style:{borderRadius:"20px", width:"520px"}
+                }}
+                disableAutoFocus={true}
+            >
+                <div className="flexColumn bg-White" style={{padding:"30px 20px 20px 20px"}}>
+                    {WebcamCapture()}
+
+                </div>
+
+            </Dialog>
 
         </div>
     );
