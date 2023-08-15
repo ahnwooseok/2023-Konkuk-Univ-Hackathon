@@ -57,8 +57,7 @@ def stable_diffusion_api(origin_base64, mask_base64, feature):
         json_body = json.dumps(body)
         
         response = requests.post(url, data = json_body)
-        
-        
+
         return response.json()
     except:
         print(traceback.format_exc())
