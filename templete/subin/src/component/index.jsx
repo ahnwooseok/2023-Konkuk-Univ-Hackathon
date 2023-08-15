@@ -78,7 +78,7 @@ export default function Index() {
             <div className='index mobile'>
                  <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between",borderBottom:"1px solid black"}}>
                     <div style={{display:"flex", flexDirection:"row"}}>
-                    <img id="mlogo" src={logo}  style={{width:'280px'}}></img>
+                    <img id="mlogo" src={logo}  style={{width:'260px',height:'30px'}}></img>
 
                     </div>
                     <div>
