@@ -14,7 +14,7 @@ export default function Templete4() {
            
             <div class="header">
                 <h1 class="title4">
-                    영시스터
+                    QUEEN
                 </h1>
                 
             </div>

@@ -27,7 +27,7 @@ export default function Index() {
     const randomIndex = Math.floor(Math.random() * templates.length);
     const RandomTemplate = templates[randomIndex];
     const [selectedGender, setSelectedGender] = useState("");
-    const [result, setResult] = useState(true)
+    const [result, setResult] = useState(false)
     const isMobile = useMobile()
     useEffect(()=>{
         console.log(isMobile)
@@ -48,7 +48,7 @@ export default function Index() {
                     
                     </div>
                     </div>
-                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">레트로 잡지 표지 생성기</h1>}
+                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">Retronize - 레트로 잡지 표지 생성기</h1>}
                     {result ? <p></p>:<p>설명이 들어갑니다.설명이 들어갑니다.</p>}
                     <div className='result-template'>
                   {result ? <Template4/> :<img id="graybox" src={graybox} style={{width:'80%'}}></img>}
@@ -65,7 +65,7 @@ export default function Index() {
             <div>
             <Header/>
             <div className='main-left'>
-            <h1 id="main-title">레트로 잡지 표지 생성기</h1>
+            <h1 id="main-title">Retronize - <br/>레트로 잡지 표지 생성기</h1>
             <p id="main-subtitle">설명이 들어갑니다.설명이 들어갑니다. 설명이 들어갑니다.설명이 들어갑니다.</p>
                 <div className='file'>
                     <img src={faceid} id="faceid"></img>

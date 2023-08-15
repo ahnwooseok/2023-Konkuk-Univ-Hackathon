@@ -14,7 +14,7 @@ export default function Templete2() {
            
             <div class="header">
                 <h1 class="title2">
-                    하이틴
+                    신사의휴일
                 </h1>
             </div>
             <div class="left">

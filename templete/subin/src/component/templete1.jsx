@@ -13,7 +13,7 @@ export default function Templete1() {
            
             <div class="header">
                 <h1 class="title">
-                    선데이 서울
+                    선데이서울
                 </h1>
             </div>
             <div class="left">

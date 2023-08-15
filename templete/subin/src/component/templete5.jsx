@@ -14,7 +14,7 @@ export default function Templete5() {
            
             <div class="header">
                 <h1 class="title5">
-                    잘생겼다
+                    잘생겼다이
                 </h1>
                 
             </div>
