@@ -70,6 +70,21 @@ export default function Index() {
         </Webcam>
     );
 
+
+    const handleShare = () => {
+        console.log(navigator.share)
+        if (navigator.share) {
+            navigator.share({
+                title: '기록하며 성장하기',
+                text: 'Hello World',
+                url: 'https://shinsangeun.github.io',
+                // files:[],
+            });
+        }else{
+            alert("공유하기가 지원되지 않는 환경 입니다.")
+        }
+    }
+
     return (
 
     
@@ -136,24 +151,18 @@ export default function Index() {
 
                             if(previewImgUrl) {
                                 setImg(e.target.files[0]);
-                                setPreviewImg(previewImgUrl);
+                                setImageSrc(previewImgUrl);
                             }
                         }
                     }}
                     capture={"user"}
                 />
                 {isSecondFlow ?
-                    <img
-                        id="mbtn"
-                        src={b3}
-                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
-                        onClick={()=>{
-                            if(isSecondFlow){}
-                            else{
-
-                            }
-                        }}
-                    />
+                    <a
+                        style={{border:"1px solid blue", width:"fit-content"}}
+                        download="karina.jpg"
+                        href={imageSrc}
+                    >이미지 저장</a>
                     :
                     <label
                         id="mbtn"
@@ -168,24 +177,13 @@ export default function Index() {
                         id="mbtn"
                         src={b4}
                         style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
-                        onClick={()=>{
-                            if(isSecondFlow){}
-                            else{
-
-                            }
-                        }}
+                        onClick={()=>{handleShare()}}
                     />
                     :
                     <label
                         id="mbtn"
                         style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
                         htmlFor="file2"
-                        onClick={()=>{
-                            if(isSecondFlow){}
-                            else{
-
-                            }
-                        }}
                     >
                         사진촬영
                     </label>
@@ -193,7 +191,10 @@ export default function Index() {
                   <img id="create" src={isSecondFlow ?  retry :btn} style={{width:'80%',cursor:"pointer"}}
                        onClick={()=>{
                            if(isSecondFlow){
-                               window.reload()
+                               setIsSecondFlow(false)
+                               setImg(null)
+                               setImageSrc(null)
+                               setIsLoading(false)
                            }
                            else{
                                if(imageSrc == null) alert("이미지를 업로드 해주세요.")
@@ -289,9 +290,20 @@ export default function Index() {
                                     <CustomLoading/>
                                     :
                                     <div>
-                                        <div>변환된 이미지</div>
-                                        <div>이미지 저장</div>
-                                        <div>공유하기</div>
+                                        <img
+                                            style={{width:"100px", height:"100px"}}
+                                            src={imageSrc}
+                                        />
+                                        <div style={{height:"100px"}}/>
+                                        <a
+                                            style={{border:"1px solid blue", width:"fit-content"}}
+                                            download="karina.jpg"
+                                            href={imageSrc}
+                                        >이미지 저장</a>
+                                        <div style={{height:"100px"}}/>
+                                        <div style={{border:"1px solid blue", width:"fit-content"}}
+                                             onClick={()=>{handleShare()}}
+                                        >공유하기</div>
                                     </div>
                             }
                         </div>
