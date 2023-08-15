@@ -9,9 +9,9 @@ import numpy as np
 
 
 # Store path of the image in the variable input_path
-input_path = "./datas/taeyong.png"
+input_path = "./datas/sohee.png"
 # Store path of the output image in the variable output_path
-output_path = "./datas/detected_taeyong.png"
+output_path = "./datas/detected_sohee.png"
 
 # Processing the image
 input = Image.open(input_path)
