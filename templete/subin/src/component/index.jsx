@@ -112,7 +112,7 @@ export default function Index() {
                     <div className='result-template'>
                   {isSecondFlow ?
                       <div>
-                          {!isLoading ? <CustomLoading/> : <div>
+                          {isLoading ? <CustomLoading/> : <div>
                               변환된 이미지
                           </div>}
                       </div>
