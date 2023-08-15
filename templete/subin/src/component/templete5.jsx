@@ -23,16 +23,17 @@ export default function Templete5() {
                
             </div>
             <div class="t5_sec2">
-                <p id="t5_content2">본문내용ㅇㅇㅇ1</p>
-                <p id="t5_content3">본문내용2</p>
-                <p id="t5_content4">본문내용3</p>
-               
+                <p id="t5_content2">본문내용2</p>
+                <p id="t5_content3">본문내용3</p>
+                <p id="t5_content4">본문내용4</p>
+                <p id="t5_content5">본문내용5</p>
                
             </div>
             <div class="t5_sec3">
-                <p id="t5_content5">본문내용522</p>
                 <p id="t5_content6">본문내용6</p>
-                <p id="t5_content7">본문내용3</p>
+                <p id="t5_content7">본문내용7</p>
+                <p id="t5_content8">본문내용8</p>
+               
                 
                
             </div>

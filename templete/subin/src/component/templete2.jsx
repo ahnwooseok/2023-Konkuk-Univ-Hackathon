@@ -28,8 +28,7 @@ export default function Templete2() {
                 <p id="t2_content6">본문내용6</p>
                 <p id="t2_content7">본문내용7</p>
                 <p id="t2_content8">본문내용8</p>
-                <p id="t2_content9">본문내용9</p>
-                <p id="t2_content10">본문내용10</p>
+             
                 
             </div>
             <BarcodeItemScreen/>

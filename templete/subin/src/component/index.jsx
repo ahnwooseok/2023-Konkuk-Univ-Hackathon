@@ -86,7 +86,7 @@ export default function Index() {
 
                     </div>
                     </div>
-                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">Retronize - 레트로 잡지 표지 생성기</h1>}
+                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">Retronize - <br/>레트로 잡지 표지 생성기</h1>}
                     {result ? <p></p>:<p>설명이 들어갑니다.설명이 들어갑니다.</p>}
                     <div className='result-template'>
                   {isSecondFlow ?
@@ -220,7 +220,7 @@ export default function Index() {
                 <Header/>
                 <div style={{display:"flex", flexDirection:"row", alignItems:"center", height:"calc(100vh-65px)"}}>
                     <div className='main-left' style={{minWidth:"500px", boxSizing:"border-box"}}>
-                        <h1 id="main-title">레트로 잡지 표지 생성기</h1>
+                        <h1 id="main-title">Retronize - <br/>레트로 잡지 표지 생성기</h1>
                         <p id="main-subtitle">설명이 들어갑니다.설명이 들어갑니다. 설명이 들어갑니다.설명이 들어갑니다.</p>
                         <div className='file' style={{display:"flex", flexDirection:"row"}}>
                             <img src={imageSrc === null ? faceid : imageSrc} id="faceid"/>
