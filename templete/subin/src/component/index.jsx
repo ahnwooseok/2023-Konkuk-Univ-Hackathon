@@ -168,14 +168,14 @@ export default function Index() {
 
                         <a
                             id="image-save"
-                            style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
+                            style={{border:"none", width:"150px",height:"40px" ,color:"transparent",display:"inline-block"}}
                             download="karina.jpg"
                             href={imageSrc}
                         >이미지 저장</a>
                         :
                         <label
-                            id="mbtn"
-                            style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                            id="mbtn1"
+                            style={{width:"150px",height:"40px",cursor:"pointer",color:"transparent"}}
                             htmlFor="file"
                         >
                             파일업로드
@@ -185,13 +185,13 @@ export default function Index() {
                     {isSecondFlow ?
                         <a
                             id="mbtn"
-                            style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
+                            style={{border:"none", width:"150px",height:"40px" ,color:"transparent",display:"inline-block"}}
                             onClick={()=>{handleShare()}}
                         />
                         :
                         <label
-                            id="mbtn"
-                            style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                            id="mbtn2"
+                            style={{width:"150px",height:"40px",cursor:"pointer",color:"transparent"}}
                             htmlFor="file2"
                         >
                             사진촬영
