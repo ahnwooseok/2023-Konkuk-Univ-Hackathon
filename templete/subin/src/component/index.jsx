@@ -163,39 +163,42 @@ export default function Index() {
                     }}
                     capture={"user"}
                 />
-                {isSecondFlow ?
-                   
-                    <a
-                        id="image-save"
-                        style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
-                        download="karina.jpg"
-                        href={imageSrc}
-                    >이미지 저장</a>
-                    :
-                    <label
-                        id="mbtn"
-                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
-                        htmlFor="file"
-                    >
-                        파일업로드
-                    </label>
-                }
-                {isSecondFlow ?
-                    <a
-                        id="mbtn"
-                        style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
-                       
-                        onClick={()=>{handleShare()}}
-                    />
-                    :
-                    <label
-                        id="mbtn"
-                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
-                        htmlFor="file2"
-                    >
-                        사진촬영
-                    </label>
-                }
+                <div style={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center"}}>
+                    {isSecondFlow ?
+
+                        <a
+                            id="image-save"
+                            style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
+                            download="karina.jpg"
+                            href={imageSrc}
+                        >이미지 저장</a>
+                        :
+                        <label
+                            id="mbtn"
+                            style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                            htmlFor="file"
+                        >
+                            파일업로드
+                        </label>
+                    }
+                    <div style={{width:"20px"}}/>
+                    {isSecondFlow ?
+                        <a
+                            id="mbtn"
+                            style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
+                            onClick={()=>{handleShare()}}
+                        />
+                        :
+                        <label
+                            id="mbtn"
+                            style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                            htmlFor="file2"
+                        >
+                            사진촬영
+                        </label>
+                    }
+                </div>
+
                   <img id="create" src={isSecondFlow ?  retry :btn} style={{width:'80%',cursor:"pointer"}}
                        onClick={()=>{
                            if(isSecondFlow){
