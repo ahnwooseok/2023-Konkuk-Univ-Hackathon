@@ -34,3 +34,15 @@
 #mtitle{
     padding-top: 80px;
 }
+.mobile{
+width: 100vw;
+overflow: auto;
+}
+.result-template{
+    zoom: 0.5;
+    margin-bottom: 100px;
+}
+.index{
+    height: 100vh;
+    overflow: hidden;
+}

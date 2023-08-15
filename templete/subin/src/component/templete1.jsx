@@ -7,11 +7,8 @@ import { useEffect, useState } from 'react'
 export default function Templete1() {
    
     return(
-<html>
-    <head>
-        <link rel="stylesheet" href="../css/templete1.css" />
-    </head>
-    <body>
+
+   
         <div class="templete1">
            
             <div class="header">
@@ -35,7 +32,6 @@ export default function Templete1() {
             </div>
             <BarcodeItemScreen/>
         </div>
-    </body>
-</html>
+    
     );
 }

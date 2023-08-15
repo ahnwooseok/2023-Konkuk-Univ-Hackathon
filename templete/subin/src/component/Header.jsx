@@ -9,7 +9,7 @@ export default function Header() {
        
     </div>
     <div style={{paddingRight:"20px"}}>
-        <img src={github} style={{width:"150px"}}></img>
+        <img src={github} style={{width:"150px",cursor:"pointer"}} onClick={()=>{window.open('https://github.com/ahnwooseok/2023-Konkuk-Univ-Hackathon')}}></img>
       
     </div>
 </div>

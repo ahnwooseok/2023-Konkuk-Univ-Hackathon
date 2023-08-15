@@ -27,7 +27,7 @@ export default function Index() {
     const randomIndex = Math.floor(Math.random() * templates.length);
     const RandomTemplate = templates[randomIndex];
     const [selectedGender, setSelectedGender] = useState("");
-    const [result, setResult] = useState(false)
+    const [result, setResult] = useState(true)
     const isMobile = useMobile()
     useEffect(()=>{
         console.log(isMobile)
@@ -44,16 +44,18 @@ export default function Index() {
                     
                     </div>
                     <div>
-                        <img src={github} style={{width:"80px"}}></img>
+                        <img src={github} style={{width:"80px"}} onClick={()=>{window.open('https://github.com/ahnwooseok/2023-Konkuk-Univ-Hackathon')}}></img>
                     
                     </div>
                     </div>
-                    <h1 id="mtitle">레트로 잡지 표지 생성기</h1>
-                    <p>설명이 들어갑니다.설명이 들어갑니다.</p>
-                  <img id="graybox" src={graybox} style={{width:'80%'}}></img>
-                  <img id="mbtn" src={result ? b3 : b1} style={{width:'40%',marginRight:'5px'}}></img>
-                  <img id="mbtn" src={result ? b4 : b2} style={{width:'40%'}}></img>
-                  <img id="create" src={result ?  retry :btn} style={{width:'80%'}}></img>
+                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">레트로 잡지 표지 생성기</h1>}
+                    {result ? <p></p>:<p>설명이 들어갑니다.설명이 들어갑니다.</p>}
+                    <div className='result-template'>
+                  {result ? <Template4/> :<img id="graybox" src={graybox} style={{width:'80%'}}></img>}
+                  </div>
+                  <img id="mbtn"  src={result ? b3 : b1} style={{width:'40%',marginRight:'5px',cursor:"pointer"}}></img>
+                  <img id="mbtn" src={result ? b4 : b2} style={{width:'40%',cursor:"pointer"}}></img>
+                  <img id="create" src={result ?  retry :btn} style={{width:'80%',cursor:"pointer"}}></img>
                 </div>
               
           
