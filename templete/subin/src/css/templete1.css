@@ -57,9 +57,9 @@
     background-color: #F6F6F6;
     float: left;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top: 40px;
     width: 500px;
-    margin-left: 50px;
+    margin-left: 40px;
 
 }
 .main-right{
@@ -73,6 +73,7 @@
 }
 #faceid{
     width: 100px;
+    height: 100px;
     display: block;
     padding-top: 50px;
     float: left;
@@ -123,7 +124,7 @@
     zoom: -100;
 }
 .file{
-   overflow: auto;
+   /*overflow: auto;*/
     margin: 50px auto 0 auto;
     background-color: white;
     border-radius: 20px;
@@ -145,6 +146,18 @@
     height: 70px;
     line-height: 70px;
     cursor: pointer;
+}
+.converbtn-before{
+    background-color:#d9d9d9;
+    color:white;
+    font-size: 32px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
 }
 .index{
 position: relative;
