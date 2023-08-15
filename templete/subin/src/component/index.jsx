@@ -23,6 +23,7 @@ import github from "../img/git.png"
 import useMobile from "../hooks/useMobile";
 import Webcam from "react-webcam";
 import {Dialog} from "@mui/material";
+import msave from "../img/msave.png";
 import CustomLoading from "../utils/CustomLoading";
 
 export default function Index() {
@@ -51,9 +52,10 @@ export default function Index() {
         <Webcam
             audio={false}
             width={400}
-            height={600}
+            height={300}
+            mirrored={true}
             screenshotFormat="image/jpeg"
-
+            style={{display:"block",textAlign:"center",margin:"0 auto 0 auto"}}
             videoConstraints={videoConstraints}
         >
             {({ getScreenshot }) => (
@@ -62,9 +64,11 @@ export default function Index() {
                         const imageSrc = getScreenshot()
                         console.log(imageSrc)
                         setImageSrc(imageSrc)
+                        setCameraModalOpen(false)
                     }}
+                    style={{display:"block",textAlign:"center",margin:"0 auto 0 auto",width:"100px",height:"40px",backgroundColor:"#666666",border:"none",borderRadius:"5px",color:"white"}}
                 >
-                    Capture photo
+                    촬영
                 </button>
             )}
         </Webcam>
@@ -108,7 +112,7 @@ export default function Index() {
                     <div className='result-template'>
                   {isSecondFlow ?
                       <div>
-                          {isLoading ? <CustomLoading/> : <div>
+                          {!isLoading ? <CustomLoading/> : <div>
                               변환된 이미지
                           </div>}
                       </div>
@@ -160,8 +164,10 @@ export default function Index() {
                     capture={"user"}
                 />
                 {isSecondFlow ?
+                   
                     <a
-                        style={{border:"1px solid blue", width:"fit-content"}}
+                        id="image-save"
+                        style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
                         download="karina.jpg"
                         href={imageSrc}
                     >이미지 저장</a>
@@ -175,10 +181,10 @@ export default function Index() {
                     </label>
                 }
                 {isSecondFlow ?
-                    <img
+                    <a
                         id="mbtn"
-                        src={b4}
-                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                        style={{border:"none", width:"150px", height:"50px" ,color:"transparent",display:"inline-block"}}
+                       
                         onClick={()=>{handleShare()}}
                     />
                     :
@@ -286,26 +292,29 @@ export default function Index() {
                     </div>
                     <div style={{width:"40px"}}/>
                     {isSecondFlow ?
-                        <div style={{backgroundColor:"gray", width:"100%"}}>
+                        <div style={{backgroundColor:"transparent", width:"100%"}}>
                             {
                                 isLoading ?
                                     <CustomLoading/>
                                     :
                                     <div>
+                                    <div style={{width:"100%", display:"flex", justifyContent:"center", alignItems:"center",flexDirection:"column",marginBottom:"50px"}}>
                                         <img
-                                            style={{width:"100px", height:"100px"}}
+                                            style={{width:"300px", height:"400px"}}
                                             src={imageSrc}
                                         />
-                                        <div style={{height:"100px"}}/>
+                                        </div>
+                                        <div style={{width:"100%",height:"20px",display:"flex",flexDirection:"row",justifyContent:"center", alignItems:"center"}}>
                                         <a
-                                            style={{border:"1px solid blue", width:"fit-content"}}
+                                            style={{backgroundColor:"#666666",color:"white", width:"150px",display:"inline-block",height:"40px",textAlign:"center",lineHeight:"40px",textDecoration:"none",borderRadius:"10px",marginRight:"10px"}}
                                             download="karina.jpg"
                                             href={imageSrc}
                                         >이미지 저장</a>
-                                        <div style={{height:"100px"}}/>
-                                        <div style={{border:"1px solid blue", width:"fit-content"}}
+                                       
+                                        <div style={{backgroundColor:"#666666",color:"white", width:"150px",display:"inline-block",height:"40px",textAlign:"center",lineHeight:"40px",textDecoration:"none",borderRadius:"10px"}}
                                              onClick={()=>{handleShare()}}
                                         >공유하기</div>
+                                        </div>
                                     </div>
                             }
                         </div>

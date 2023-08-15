@@ -1,9 +1,11 @@
 import Lottie from "lottie-react";
 import loading from "./loading.json"
-const CustomLoading = ({style={width: 160},wrapperStyle={width: "100%"},marginTop=null}) => {
-    return <div className="flexRow" style={{position:"absolute", top:"50vh"}}>
-        <div className="flexRow" style={wrapperStyle}><Lottie  style={style} animationData={loading} loop={true} /></div>
-    </div>
+import spinner from "../img/loading.gif"
+const CustomLoading = () => {
+    return   <div style={{backgroundColor:"transparent", width:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}>
+        <img src={spinner} style={{width:"200px",display:"block",margin:"0 auto 0 atuo",textAlign:"center"}}/>
+        </div>
+  
 }
 export default CustomLoading;
 
