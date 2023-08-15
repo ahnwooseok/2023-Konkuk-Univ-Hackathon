@@ -1,4 +1,4 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI, Request, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from lib.age_detect import *
 from lib.in_paint_image import *
@@ -17,9 +17,9 @@ app.add_middleware(
 
 
 app.post("/transferImage")
-async def transfer_image(body: Request):
-    dict_body = await body.json()
-    return {"code" : 200 , "data" : dict_body}
+async def transfer_image(file : UploadFile):
+    return file.filename
+    
 
 
     

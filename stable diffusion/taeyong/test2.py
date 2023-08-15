@@ -1,11 +1,17 @@
 # Importing Required Modules
 from rembg import remove
 from PIL import Image
+# 침식 연산 (morph_erode.py)
+
+import cv2
+import numpy as np
+
+
 
 # Store path of the image in the variable input_path
-input_path = "./datas/person1.png"
+input_path = "./datas/taeyong.png"
 # Store path of the output image in the variable output_path
-output_path = "./datas/detected_person.png"
+output_path = "./datas/detected_taeyong.png"
 
 # Processing the image
 input = Image.open(input_path)
@@ -27,3 +33,11 @@ for x in range(width):
 
 
 output.save(output_path)
+
+img = cv2.imread(output_path)
+# 구조화 요소 커널, 사각형 (3x3) 생성 ---①
+k = cv2.getStructuringElement(cv2.MORPH_ERODE, (3,3))
+# 침식 연산 적용 ---②
+dilation = cv2.dilate(img, k)
+
+cv2.imwrite(output_path, dilation)
