@@ -89,11 +89,127 @@ export default function Index() {
                     {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">Retronize - 레트로 잡지 표지 생성기</h1>}
                     {result ? <p></p>:<p>설명이 들어갑니다.설명이 들어갑니다.</p>}
                     <div className='result-template'>
-                  {result ? <Template4/> :<img id="graybox" src={graybox} style={{width:'80%'}}></img>}
+                  {isSecondFlow ?
+                      <div>
+                          {isLoading ? <CustomLoading/> : <div>
+                              변환된 이미지
+                          </div>}
+                      </div>
+
+                      :
+                      <img id="graybox" src={imageSrc === null ? faceid : imageSrc}/>
+                  }
                   </div>
-                  <img id="mbtn"  src={result ? b3 : b1} style={{width:'40%',marginRight:'5px',cursor:"pointer"}}></img>
-                  <img id="mbtn" src={result ? b4 : b2} style={{width:'40%',cursor:"pointer"}}></img>
-                  <img id="create" src={result ?  retry :btn} style={{width:'80%',cursor:"pointer"}}></img>
+                <input
+                    style={{display:"none"}}
+                    type="file"
+                    id='file'
+                    accept='image/jpg, image/jpeg, image/png, image/bmp'
+                    onChange={(e) => {
+                        console.log(e)
+                        let reader = new FileReader()
+                        if(e.target.files[0]) {
+                            reader.readAsDataURL(e.target.files[0])
+                        }
+                        reader.onloadend = () => {
+                            const previewImgUrl = reader.result;
+
+                            if(previewImgUrl) {
+                                setImg(e.target.files[0]);
+                                setImageSrc(previewImgUrl);
+                            }
+                        }
+                    }}/>
+                <input
+                    style={{display:"none"}}
+                    type="file"
+                    id='file2'
+                    accept='image/jpg, image/jpeg, image/png, image/bmp'
+                    onChange={(e) => {
+                        console.log(e)
+                        let reader = new FileReader()
+                        if(e.target.files[0]) {
+                            reader.readAsDataURL(e.target.files[0])
+                        }
+                        reader.onloadend = () => {
+                            const previewImgUrl = reader.result;
+
+                            if(previewImgUrl) {
+                                setImg(e.target.files[0]);
+                                setPreviewImg(previewImgUrl);
+                            }
+                        }
+                    }}
+                    capture={"user"}
+                />
+                {isSecondFlow ?
+                    <img
+                        id="mbtn"
+                        src={b3}
+                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                        onClick={()=>{
+                            if(isSecondFlow){}
+                            else{
+
+                            }
+                        }}
+                    />
+                    :
+                    <label
+                        id="mbtn"
+                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                        htmlFor="file"
+                    >
+                        파일업로드
+                    </label>
+                }
+                {isSecondFlow ?
+                    <img
+                        id="mbtn"
+                        src={b4}
+                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                        onClick={()=>{
+                            if(isSecondFlow){}
+                            else{
+
+                            }
+                        }}
+                    />
+                    :
+                    <label
+                        id="mbtn"
+                        style={{width:'40%',marginRight:'5px',cursor:"pointer"}}
+                        htmlFor="file2"
+                        onClick={()=>{
+                            if(isSecondFlow){}
+                            else{
+
+                            }
+                        }}
+                    >
+                        사진촬영
+                    </label>
+                }
+                  <img id="create" src={isSecondFlow ?  retry :btn} style={{width:'80%',cursor:"pointer"}}
+                       onClick={()=>{
+                           if(isSecondFlow){
+                               window.reload()
+                           }
+                           else{
+                               if(imageSrc == null) alert("이미지를 업로드 해주세요.")
+                               else{
+                                   setIsSecondFlow(true)
+                                   setIsLoading(true)
+                                   setTimeout(() => {
+                                       setIsLoading(false)
+                                       alert("convert complete")
+
+                                   }, 3000);
+                               }
+                           }
+
+                       }}
+                  />
                 </div>
               
           
