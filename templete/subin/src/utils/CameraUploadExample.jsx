@@ -18,7 +18,8 @@ export default function CameraUploadExample() {
         <Webcam
             audio={false}
             width={400}
-            height={600}
+            height={400}
+            mirrored={true}
             screenshotFormat="image/jpeg"
 
             videoConstraints={videoConstraints}
@@ -30,6 +31,7 @@ export default function CameraUploadExample() {
                         console.log(imageSrc)
                         setImageSrc(imageSrc)
                     }}
+                    style={{width:"100px"}}
                 >
                     Capture photo
                 </button>
@@ -62,7 +64,8 @@ export default function CameraUploadExample() {
                 }}
                 disableAutoFocus={true}
             >
-                <div className="flexColumn bg-White" style={{padding:"30px 20px 20px 20px"}}>
+                <div className="flexColumn bg-White" >
+                    <p>치~즈</p>
                     {WebcamCapture()}
 
                 </div>

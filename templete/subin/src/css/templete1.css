@@ -57,9 +57,9 @@
     background-color: #F6F6F6;
     float: left;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top: 40px;
     width: 500px;
-    margin-left: 50px;
+    margin-left: 40px;
 
 }
 .main-right{
@@ -73,6 +73,7 @@
 }
 #faceid{
     width: 100px;
+    height: 100px;
     display: block;
     padding-top: 50px;
     float: left;
@@ -123,7 +124,7 @@
     zoom: -100;
 }
 .file{
-   overflow: auto;
+   /*overflow: auto;*/
     margin: 50px auto 0 auto;
     background-color: white;
     border-radius: 20px;
@@ -145,6 +146,18 @@
     height: 70px;
     line-height: 70px;
     cursor: pointer;
+}
+.converbtn-before{
+    background-color:#d9d9d9;
+    color:white;
+    font-size: 32px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
 }
 .index{
 position: relative;
@@ -184,7 +197,7 @@ position: relative;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
-    font-size: 76px;
+    font-size: 80px;
 }
 .left{
     bottom:20px;
@@ -201,38 +214,38 @@ position: relative;
     text-align: end;
     float: right;
 }
-#content6{
+#t1_content4{
     font-size: 24px;
     -webkit-text-stroke: 0.5px white;
     font-family: 'ghana';
     color: yellow;
 }
-#content7{
+#t1_content5{
     font-size: 32px;
     -webkit-text-stroke: 0.5px white;
     font-family: 'sol';
     color: blue;
 }
-#content8{
+#t1_content6{
     font-size: 20px;
     -webkit-text-stroke: 0.5px white;
     font-family: 'pado';
     color: #009630;
 }
-#content9{
+#t1_content7{
     font-size: 32px;
     -webkit-text-stroke: 1px black;
     font-family: 'gompyo';
     color: #FC46AA;
 }
-#content10{
+#t1_content8{
     font-family: 'batang';
     font-size: 28px;
     -webkit-text-stroke: 1px black;
     color: white;
     margin-bottom: 80px;
 }
-#content1{
+#t1_content1{
     text-align: end;
     margin-bottom: 170px;
     top: 100px;
@@ -242,7 +255,7 @@ position: relative;
     font-size: 32px;
     writing-mode: vertical-rl;
 }
-#content2{
+#t1_content2{
     
     font-family: 'batang';
     font-size: 40px;
@@ -250,7 +263,7 @@ position: relative;
    
     color: #FFF44F;
 }
-#content3{
+#t1_content3{
     
     font-family: 'batang';
     font-size: 28px;

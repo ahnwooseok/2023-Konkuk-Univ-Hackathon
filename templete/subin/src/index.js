@@ -13,7 +13,7 @@ import Main from './component/index'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FileUploadExample from "./utils/FileUploadExample";
 import CameraUploadExample from "./utils/CameraUploadExample";
-
+import TitleMaker from './component/TitleMaker';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Router>
@@ -27,6 +27,7 @@ root.render(
         <Route path="/6"  element={<Templete6/>}></Route>
         <Route path="/fileUpload"  element={<FileUploadExample/>}></Route>
         <Route path="/cameraUpload"  element={<CameraUploadExample/>}></Route>
+        <Route path="/titleMaker"  element={<TitleMaker/>}></Route>
       </Routes>
     </Router>
 );

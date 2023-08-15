@@ -21,17 +21,76 @@ import btn from "../img/create.png"
 import logo from "../img/yangbong.png"
 import github from "../img/git.png"
 import useMobile from "../hooks/useMobile";
+import Webcam from "react-webcam";
+import {Dialog} from "@mui/material";
+import msave from "../img/msave.png";
+import CustomLoading from "../utils/CustomLoading";
 
 export default function Index() {
     const templates = [Template1, Template2, Template3, Template4, Template5];
     const randomIndex = Math.floor(Math.random() * templates.length);
     const RandomTemplate = templates[randomIndex];
     const [selectedGender, setSelectedGender] = useState("");
-    const [result, setResult] = useState(true)
+    const [result, setResult] = useState(false)
     const isMobile = useMobile()
-    useEffect(()=>{
-        console.log(isMobile)
-    },[])
+
+    const [isLoading, setIsLoading] = useState(false)
+    const [isSecondFlow, setIsSecondFlow] = useState(false)
+
+    const [ img, setImg ] = useState(null)
+    const [ previewImg, setPreviewImg ] = useState(null);
+    const [imageSrc, setImageSrc] = useState(null)
+    const [cameraModalOpen, setCameraModalOpen] = useState(false)
+
+    const videoConstraints = {
+        width: 1280,
+        height: 720,
+        facingMode: "user"
+    };
+
+    const WebcamCapture = () => (
+        <Webcam
+            audio={false}
+            width={400}
+            height={300}
+            mirrored={true}
+            screenshotFormat="image/jpeg"
+            style={{display:"block",textAlign:"center",margin:"0 auto 0 auto"}}
+            videoConstraints={videoConstraints}
+        >
+            {({ getScreenshot }) => (
+                <button
+                    onClick={() => {
+                        const imageSrc = getScreenshot()
+                        console.log(imageSrc)
+                        setImageSrc(imageSrc)
+                        setCameraModalOpen(false)
+                    }}
+                    style={{display:"block",textAlign:"center",margin:"0 auto 0 auto",width:"100px",height:"40px",backgroundColor:"#666666",border:"none",borderRadius:"5px",color:"white"}}
+                >
+                    촬영
+                </button>
+            )}
+        </Webcam>
+    );
+
+
+    const handleShare = () => {
+        console.log(navigator.share)
+        if (navigator.share) {
+            navigator.share({
+                title: '기록하며 성장하기',
+                text: 'Hello World',
+                url: 'https://shinsangeun.github.io',
+                // files:[],
+            }).then((res)=>{
+                console.log(res)
+            })
+        }else{
+            alert("공유하기가 지원되지 않는 환경 입니다.")
+        }
+    }
+
     return (
 
     
@@ -40,51 +99,253 @@ export default function Index() {
             <div className='index mobile'>
                  <div style={{display:"flex", flexDirection:"row", justifyContent:"space-between",borderBottom:"1px solid black"}}>
                     <div style={{display:"flex", flexDirection:"row"}}>
-                    <img id="mlogo" src={logo}  style={{width:'280px'}}></img>
-                    
+                    <img id="mlogo" src={logo}  style={{width:'260px',height:'30px'}}></img>
+
                     </div>
                     <div>
                         <img src={github} style={{width:"80px"}} onClick={()=>{window.open('https://github.com/ahnwooseok/2023-Konkuk-Univ-Hackathon')}}></img>
-                    
+
                     </div>
                     </div>
-                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">레트로 잡지 표지 생성기</h1>}
+                    {result ? <h1 id="mtitle"></h1> : <h1 id="mtitle">Retronize - <br/>레트로 잡지 표지 생성기</h1>}
                     {result ? <p></p>:<p>설명이 들어갑니다.설명이 들어갑니다.</p>}
                     <div className='result-template'>
-                  {result ? <Template4/> :<img id="graybox" src={graybox} style={{width:'80%'}}></img>}
+                  {isSecondFlow ?
+                      <div>
+                          {isLoading ? <CustomLoading/> : <div>
+                              변환된 이미지
+                          </div>}
+                      </div>
+
+                      :
+                      <img id="graybox" src={imageSrc === null ? faceid : imageSrc}/>
+                  }
                   </div>
-                  <img id="mbtn"  src={result ? b3 : b1} style={{width:'40%',marginRight:'5px',cursor:"pointer"}}></img>
-                  <img id="mbtn" src={result ? b4 : b2} style={{width:'40%',cursor:"pointer"}}></img>
-                  <img id="create" src={result ?  retry :btn} style={{width:'80%',cursor:"pointer"}}></img>
+                <input
+                    style={{display:"none"}}
+                    type="file"
+                    id='file'
+                    accept='image/jpg, image/jpeg, image/png, image/bmp'
+                    onChange={(e) => {
+                        console.log(e)
+                        let reader = new FileReader()
+                        if(e.target.files[0]) {
+                            reader.readAsDataURL(e.target.files[0])
+                        }
+                        reader.onloadend = () => {
+                            const previewImgUrl = reader.result;
+
+                            if(previewImgUrl) {
+                                setImg(e.target.files[0]);
+                                setImageSrc(previewImgUrl);
+                            }
+                        }
+                    }}/>
+                <input
+                    style={{display:"none"}}
+                    type="file"
+                    id='file2'
+                    accept='image/jpg, image/jpeg, image/png, image/bmp'
+                    onChange={(e) => {
+                        console.log(e)
+                        let reader = new FileReader()
+                        if(e.target.files[0]) {
+                            reader.readAsDataURL(e.target.files[0])
+                        }
+                        reader.onloadend = () => {
+                            const previewImgUrl = reader.result;
+
+                            if(previewImgUrl) {
+                                setImg(e.target.files[0]);
+                                setImageSrc(previewImgUrl);
+                            }
+                        }
+                    }}
+                    capture={"user"}
+                />
+                <div style={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center"}}>
+                    {isSecondFlow ?
+
+                        <a
+                            id="image-save"
+                            style={{border:"none", width:"150px",height:"40px" ,color:"transparent",display:"inline-block"}}
+                            download="karina.jpg"
+                            href={imageSrc}
+                        >이미지 저장</a>
+                        :
+                        <label
+                            id="mbtn1"
+                            style={{width:"150px",height:"40px",cursor:"pointer",color:"transparent"}}
+                            htmlFor="file"
+                        >
+                            파일업로드
+                        </label>
+                    }
+                    <div style={{width:"20px"}}/>
+                    {isSecondFlow ?
+                        <a
+                            id="mbtn"
+                            style={{border:"none", width:"150px",height:"40px" ,color:"transparent",display:"inline-block"}}
+                            onClick={()=>{handleShare()}}
+                        />
+                        :
+                        <label
+                            id="mbtn2"
+                            style={{width:"150px",height:"40px",cursor:"pointer",color:"transparent"}}
+                            htmlFor="file2"
+                        >
+                            사진촬영
+                        </label>
+                    }
+                </div>
+
+                  <img id="create" src={isSecondFlow ?  retry :btn} style={{width:'80%',cursor:"pointer"}}
+                       onClick={()=>{
+                           if(isSecondFlow){
+                               setIsSecondFlow(false)
+                               setImg(null)
+                               setImageSrc(null)
+                               setIsLoading(false)
+                           }
+                           else{
+                               if(imageSrc == null) alert("이미지를 업로드 해주세요.")
+                               else{
+                                   setIsSecondFlow(true)
+                                   setIsLoading(true)
+                                   setTimeout(() => {
+                                       setIsLoading(false)
+                                       alert("convert complete")
+
+                                   }, 3000);
+                               }
+                           }
+
+                       }}
+                  />
                 </div>
               
           
             :
 
-            <div className='index'>
-            <div>
-            <Header/>
-            <div className='main-left'>
-            <h1 id="main-title">레트로 잡지 표지 생성기</h1>
-            <p id="main-subtitle">설명이 들어갑니다.설명이 들어갑니다. 설명이 들어갑니다.설명이 들어갑니다.</p>
-                <div className='file'>
-                    <img src={faceid} id="faceid"></img>
-                    <div className='upload'><img id="upload"src={upload}></img>파일 업로드</div>
-                    <div className='camera'><img id="camera"src={camera}></img>사진 촬영</div>
+
+            <div className=''>
+                <Header/>
+                <div style={{display:"flex", flexDirection:"row", alignItems:"center", height:"calc(100vh-65px)"}}>
+                    <div className='main-left' style={{minWidth:"500px", boxSizing:"border-box"}}>
+                        <h1 id="main-title">Retronize - <br/>레트로 잡지 표지 생성기</h1>
+                        <p id="main-subtitle">설명이 들어갑니다.설명이 들어갑니다. 설명이 들어갑니다.설명이 들어갑니다.</p>
+                        <div className='file' style={{display:"flex", flexDirection:"row"}}>
+                            <img src={imageSrc === null ? faceid : imageSrc} id="faceid"/>
+                            <div style={{width:"20px"}}/>
+                            <div style={{display:"flex", flexDirection:"column"}}>
+                                <input
+                                    style={{display:"none"}}
+                                    type="file"
+                                    id='file'
+                                    accept='image/jpg, image/jpeg, image/png, image/bmp'
+                                    onChange={(e) => {
+                                        console.log(e)
+                                        let reader = new FileReader()
+                                        if(e.target.files[0]) {
+                                            reader.readAsDataURL(e.target.files[0])
+                                        }
+                                        reader.onloadend = () => {
+                                            const previewImgUrl = reader.result;
+
+                                            if(previewImgUrl) {
+                                                setImg(e.target.files[0]);
+                                                setImageSrc(previewImgUrl);
+                                            }
+                                        }
+                                    }}/>
+                                <label
+                                    className='upload'
+                                    htmlFor="file"
+                                >
+                                    <img id="upload"src={upload}/>
+                                    파일 업로드
+                                </label>
+                                <div
+                                    className='camera'
+                                    onClick={()=>{
+                                        setCameraModalOpen(true)
+                                    }}
+                                >
+                                    <img id="camera"src={camera}/>
+                                    사진 촬영
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            className={imageSrc === null ? "converbtn-before" : 'converbtn'}
+                            onClick={()=>{
+                                if(imageSrc == null) alert("이미지를 업로드 해주세요.")
+                                else{
+                                    setIsSecondFlow(true)
+                                    setIsLoading(true)
+                                    setTimeout(() => {
+                                        setIsLoading(false)
+                                        alert("convert complete")
+
+                                    }, 3000);
+                                }
+                            }}
+
+                        >생성하기</div>
+                    </div>
+                    <div style={{width:"40px"}}/>
+                    {isSecondFlow ?
+                        <div style={{backgroundColor:"transparent", width:"100%"}}>
+                            {
+                                isLoading ?
+                                    <CustomLoading/>
+                                    :
+                                    <div>
+                                    <div style={{width:"100%", display:"flex", justifyContent:"center", alignItems:"center",flexDirection:"column",marginBottom:"50px"}}>
+                                        <img
+                                            style={{width:"300px", height:"400px"}}
+                                            src={imageSrc}
+                                        />
+                                        </div>
+                                        <div style={{width:"100%",height:"20px",display:"flex",flexDirection:"row",justifyContent:"center", alignItems:"center"}}>
+                                        <a
+                                            style={{backgroundColor:"#666666",color:"white", width:"150px",display:"inline-block",height:"40px",textAlign:"center",lineHeight:"40px",textDecoration:"none",borderRadius:"10px",marginRight:"10px"}}
+                                            download="karina.jpg"
+                                            href={imageSrc}
+                                        >이미지 저장</a>
+                                       
+                                        <div style={{backgroundColor:"#666666",color:"white", width:"150px",display:"inline-block",height:"40px",textAlign:"center",lineHeight:"40px",textDecoration:"none",borderRadius:"10px"}}
+                                             onClick={()=>{handleShare()}}
+                                        >공유하기</div>
+                                        </div>
+                                    </div>
+                            }
+                        </div>
+                        :
+                        <Marquee>
+                            <Template1 />
+                            <Template2 />
+                            <Template3 />
+                            <Template4 />
+                            <Template5 />
+                        </Marquee>
+                    }
+
                 </div>
-                <div className='converbtn'>생성하기</div>
+
+                <Dialog
+                    open={cameraModalOpen}
+                    onClose={()=>{setCameraModalOpen(false)}}
+                    PaperProps={{
+                        style:{borderRadius:"20px", width:"520px"}
+                    }}
+                    disableAutoFocus={true}
+                >
+                    <div className="flexColumn bg-White" style={{padding:"30px 20px 20px 20px"}}>
+                        {WebcamCapture()}
+                    </div>
+
+                </Dialog>
             </div>
-            </div>
-            <div className='main-right'>
-            <Marquee>
-                <Template1 />
-                <Template2 />
-                <Template3 />
-                <Template4 />
-                <Template5 />
-            </Marquee>
-            </div>
-           
-          </div>
     );
 }

@@ -1,5 +1,5 @@
 #logo{
-    width:500px;
+    width:540px;
     
 }
 
@@ -29,6 +29,8 @@
 }
 #graybox{
     margin-top: 50px;
+    width: 200px;
+    height: 200px;
     margin-bottom: 50px;
 }
 #mtitle{
@@ -40,9 +42,30 @@ overflow: auto;
 }
 .result-template{
     zoom: 0.5;
-    margin-bottom: 100px;
+    height: 400px;
 }
 .index{
     height: 100vh;
     overflow: hidden;
+}
+#mbtn{
+    background-image: url("../img/mshare.png");
+    background-size: cover;
+    background-position: center;
+   
+}
+#mbtn1{
+    background-image: url("../img/mupload.png");
+    background-size: cover;
+    background-position: center;
+}
+#mbtn2{
+    background-image: url("../img/mcamera.png");
+    background-size: cover;
+    background-position: center;
+}
+#image-save{
+    background-image: url("../img/msave.png");
+    background-size: cover;
+    background-position: center;
 }

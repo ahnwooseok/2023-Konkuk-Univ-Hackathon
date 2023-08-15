@@ -67,7 +67,7 @@ z-index: 100;
     font-family: 'pado';
     margin-top: 0px;
     text-align: center;
-    font-size: 90px;
+    font-size: 80px;
     margin: 0;
 }
 
@@ -95,13 +95,8 @@ z-index: 100;
     writing-mode: vertical-rl;
     display: inline-block;
 }
+
 #t4_content4{
-    font-size: 24px;
-    text-shadow: 1px 1px 1px black;
-    font-family: 'chosunB';
-    color: white;
-}
-#t4_content5{
    
     font-size: 32px;
    background-color: #cc0066;
@@ -109,18 +104,27 @@ z-index: 100;
     font-family: 'batang';
     color: white;
 }
-#t4_content6{
+#t4_content5{
    
     font-size: 20px;
     font-family: 'chosunB';
     color: #3ef8ff;
     
 }
-#t4_content7{
+#t4_content6{
    
     font-size: 32px;
     font-family: 'chosunB';
     color: yellow;
+}
+#t4_content7{
+    text-shadow: 2px 2px 2px black;
+    font-family: 'chosunB';
+    font-size: 40px;
+    color: white;
+    writing-mode: vertical-rl;
+    display: inline-block;
+    height: 350px;
 }
 #t4_content8{
     text-shadow: 2px 2px 2px black;
@@ -129,23 +133,10 @@ z-index: 100;
     color: white;
     writing-mode: vertical-rl;
     display: inline-block;
-}
-#t4_content9{
-    text-shadow: 2px 2px 2px black;
-    font-family: 'chosunB';
-    font-size: 40px;
-    color: white;
-    writing-mode: vertical-rl;
-    display: inline-block;
+    height: 350px;
     
 }
-#t2_content10{
-    font-family: 'chosunB';
-    font-size: 32px;
-    color: #cc0066;
-    margin-bottom: 20px;
-    
-}
+
 .barcode{
     position: absolute;
     bottom: 20px;

@@ -70,7 +70,7 @@
     text-shadow: -3px 0px rgb(22, 118, 227), 0px 3px rgb(22, 118, 227), 3px 0px rgb(22, 118, 227), 0px -3px rgb(22, 118, 227);
     font-family: 'sol';
     margin-top: 0px;
-    font-size: 90px;
+    font-size: 80px;
     margin: 0;
 }
 
@@ -110,6 +110,14 @@
     color: rgb(0, 0, 109);
 }
 #t5_content5{
+    font-family: 'batang';
+    transform:rotate(-10deg);
+    font-size: 28px;
+    color: #376d91;
+    margin-bottom: 5px;
+    text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
+}
+#t5_content6{
   
     font-size: 32px;
    background-color: #d52020;
@@ -117,7 +125,7 @@
     font-family: 'batang';
     color: white;
 }
-#t5_content6{
+#t5_content7{
    
     font-size: 32px;
     font-family: 'batang';
@@ -126,7 +134,7 @@
     background-color: rgb(255, 234, 0);
     
 }
-#t5_content7{
+#t5_content8{
     font-size: 32px;
     font-family: 'batang';
     color: white;
@@ -134,14 +142,7 @@
 
     background-color: #2500cc;
 }
-#t5_content8{
-    text-shadow: 2px 2px 2px black;
-    font-family: 'chosunB';
-    font-size: 40px;
-    color: white;
-    writing-mode: vertical-rl;
-    display: inline-block;
-}
+
 #t5_content9{
     text-shadow: 2px 2px 2px black;
     font-family: 'chosunB';
