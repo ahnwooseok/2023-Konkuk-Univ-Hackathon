@@ -79,7 +79,9 @@ export default function Index() {
                 text: 'Hello World',
                 url: 'https://shinsangeun.github.io',
                 // files:[],
-            });
+            }).then((res)=>{
+                console.log(res)
+            })
         }else{
             alert("공유하기가 지원되지 않는 환경 입니다.")
         }
