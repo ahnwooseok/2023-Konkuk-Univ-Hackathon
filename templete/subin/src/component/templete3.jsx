@@ -12,16 +12,22 @@ export default function Templete3() {
             <p id="num">제 1호</p>
           </div>
           <div class="left3">
-            <p id="t3_content1">본문내용1</p>
-            <p id="t3_content2">본문내용2</p>
-            <p id="t3_content3">본문내용3</p>
-            <p id="t3_content4">본문내용4</p>
-            <p id="t3_content5">본문내용5</p>
+            <p id="t3_content1">프레시지, 다이어트 도시락 3종 쿠팡 선런칭</p>
+            <p id="t3_content2">뉴진스, 아이돌그룹 브랜드평판 1위</p>
+            <p id="t3_content3">상온상압 초전도체가 뭐길래</p>
+            <p id="t3_content4">하트시그널4, '마음 통하는 기적' 일어날까</p>
+            <p id="t3_content5">넷플릭스 '19/20' (열아홉스물) 공개...</p>
           </div>
           <div class="right3">
-            <p id="t3_content6">본문내용6</p>
-            <p id="t3_content7">본문내용7</p>
-            <p id="t3_content8">본문내용8</p>
+            <p id="t3_content6">
+              한강 모래사장에 선베드 깔린다… '뷰 맛집' 대변신
+            </p>
+            <p id="t3_content7">
+              국민 10명 중 3명 “광복절에 일본 여행, 개인의 자유”
+            </p>
+            <p id="t3_content8">
+              동대문엽기떡볶이 '엽포터즈', 복날히든메뉴 '엽기닭볶음탕'
+            </p>
           </div>
           <BarcodeItemScreen />
         </div>
