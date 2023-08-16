@@ -38,8 +38,133 @@
     font-family: 'chosunB';
     src: url('../font/ChosunBg.TTF') format('truetype');
 }
+#main-title{
+    text-align: center;
+    font-size: 40px;
+   
+   padding-top: 40px;
+    display: block;
+    
+}
+#main-subtitle{
+    width: 80%;
+    display: block;
+    margin: 0 auto 0 auto;
+}
+.main-left{
+    margin: 0;
+    height: 600px;
+    background-color: #F6F6F6;
+    float: left;
+    border-radius: 20px;
+    margin-top: 40px;
+    width: 500px;
+    margin-left: 40px;
+
+}
+.main-right{
+    padding-top: 100px;
+    height: 100vh;
+    float: right;
+    width: 65%;
+}
+.main-right:after{
+    background-color: #ECECEC;
+}
+#faceid{
+    width: 100px;
+    height: 100px;
+    display: block;
+    padding-top: 50px;
+    float: left;
+    margin: 0px auto 0 auto;
+    margin-left: 20px;
+   
+}
+.upload{
+    color: white;
+    overflow: auto;
+    font-size: 24px;
+    line-height: 50px;
+    height: 50px;
+    width: 200px;
+   float: right;
+    margin-top: 50px;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color:#666666;
+    cursor: pointer;
+    
+}
+.camera{
+    color: white;
+    height: 50px;
+    overflow: auto;
+    font-size: 24px;
+    line-height: 50px;
+    margin-top: 10px;
+    width: 200px;
+    float: right;
+    margin-right: 20px;
+    border-radius: 10px;
+    background-color:#666666;
+    cursor: pointer;
+}
+#upload{
+    margin-left: 30px;
+    margin-right: 10px;
+}
+#camera{
+    margin-left: 35px;
+    margin-right: 10px;
+}
+.child{
+    margin-top: 0;
+    margin-right: 50px;
+    zoom: -100;
+}
+.file{
+   /*overflow: auto;*/
+    margin: 50px auto 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+    height: 200px;
+}
+.marquee{
+   
+}
+.converbtn{
+    background-color:#07BC5D;
+    color:white;
+    font-size: 32px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
+    cursor: pointer;
+}
+.converbtn-before{
+    background-color:#d9d9d9;
+    color:white;
+    font-size: 32px;
+    width: 80%;
+    margin: 20px auto 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+    height: 70px;
+    line-height: 70px;
+}
+.index{
+position: relative;
+}
 .templete1 {
-    box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
+    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
+   
     position: relative;
     width: 400px;
     height: 500px;
@@ -72,7 +197,7 @@
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: center;
-    font-size: 76px;
+    font-size: 80px;
 }
 .left{
     bottom:20px;
@@ -89,38 +214,38 @@
     text-align: end;
     float: right;
 }
-#content6{
+#t1_content4{
     font-size: 24px;
     -webkit-text-stroke: 0.5px white;
     font-family: 'ghana';
     color: yellow;
 }
-#content7{
+#t1_content5{
     font-size: 32px;
     -webkit-text-stroke: 0.5px white;
     font-family: 'sol';
     color: blue;
 }
-#content8{
+#t1_content6{
     font-size: 20px;
     -webkit-text-stroke: 0.5px white;
     font-family: 'pado';
     color: #009630;
 }
-#content9{
+#t1_content7{
     font-size: 32px;
     -webkit-text-stroke: 1px black;
     font-family: 'gompyo';
     color: #FC46AA;
 }
-#content10{
+#t1_content8{
     font-family: 'batang';
     font-size: 28px;
     -webkit-text-stroke: 1px black;
     color: white;
     margin-bottom: 80px;
 }
-#content1{
+#t1_content1{
     text-align: end;
     margin-bottom: 170px;
     top: 100px;
@@ -130,7 +255,7 @@
     font-size: 32px;
     writing-mode: vertical-rl;
 }
-#content2{
+#t1_content2{
     
     font-family: 'batang';
     font-size: 40px;
@@ -138,7 +263,7 @@
    
     color: #FFF44F;
 }
-#content3{
+#t1_content3{
     
     font-family: 'batang';
     font-size: 28px;

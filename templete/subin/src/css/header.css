@@ -1,0 +1,71 @@
+#logo{
+    width:540px;
+    
+}
+
+.main-header{
+    padding-top: 10px;
+    height: 60px;
+    border-bottom: 1px solid black;
+}
+#for{
+    display: inline-block;
+    margin-left: 100px;
+    
+    width: 300px;
+    margin: 0;
+}
+.mobile{
+    text-align: center;
+    position: relative;
+    height: 100vh;
+   
+}
+#create{
+    position: absolute;
+    bottom: 50px;
+    margin: auto;
+    right: 10%;
+}
+#graybox{
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+#mtitle{
+    padding-top: 80px;
+}
+.mobile{
+width: 100vw;
+overflow: auto;
+}
+.result-template{
+    zoom: 0.5;
+    height: 400px;
+}
+.index{
+    height: 100vh;
+    overflow: hidden;
+}
+#mbtn{
+    background-image: url("../img/mshare.png");
+    background-size: cover;
+    background-position: center;
+   
+}
+#mbtn1{
+    background-image: url("../img/mupload.png");
+    background-size: cover;
+    background-position: center;
+}
+#mbtn2{
+    background-image: url("../img/mcamera.png");
+    background-size: cover;
+    background-position: center;
+}
+#image-save{
+    background-image: url("../img/msave.png");
+    background-size: cover;
+    background-position: center;
+}

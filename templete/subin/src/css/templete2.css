@@ -1,5 +1,6 @@
 .templete2 {
-    box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
+    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
+   
     position: relative;
     width: 400px;
     height: 500px;
@@ -39,10 +40,10 @@
     font-family: 'classic';
     margin-top: 0px;
     text-align: center;
-    font-size: 90px;
-    letter-spacing : 20px;
+    font-size: 70px;
+    letter-spacing : 5px;
     margin: 0;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 #t2_content1{
     top: 100px;

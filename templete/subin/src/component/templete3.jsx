@@ -14,7 +14,7 @@ export default function Templete3() {
            
             <div class="header">
                 <h1 class="title3">
-                    영브라더
+                    영브라더요
                 </h1>
                 <p id="num">제 1호</p>
             </div>

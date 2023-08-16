@@ -1,5 +1,6 @@
 .templete3 {
-    box-shadow: 30px 30px 70px rgba(0,0,0,0.2);
+    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
+   
     position: relative;
     width: 400px;
     height: 500px;
@@ -36,7 +37,7 @@
     font-family: 'ghana';
     margin-top: 0px;
     text-align: center;
-    font-size: 90px;
+    font-size: 80px;
     margin: 0;
 }
 #num{
