@@ -1,8 +1,16 @@
 import "../css/templete5.css";
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
+import { titleMaker } from "./TitleMaker.jsx";
 
-export default function Templete5({ url, features }) {
+export default function Templete5({ url, features, scrap_data }) {
+  let data = scrap_data;
+  const [title, setTitle] = useState("");
+  useEffect(() => {
+    let result = titleMaker(features);
+    setTitle(result);
+  }, []);
+  console.log(title);
   return (
     <html>
       <body>
@@ -19,7 +27,7 @@ export default function Templete5({ url, features }) {
             src={url}
           />
           <div class="header">
-            <h1 class="title5">나이스샷</h1>
+            <h1 class="title5">{title}</h1>
           </div>
           <div class="t5_sec1">
             <p id="t5_content1">프레시지, 다이어트 도시락 3종 쿠팡 선런칭</p>

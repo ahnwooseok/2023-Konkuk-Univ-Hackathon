@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-
-
-
-
 const titles = {
   "10대 남성": ["새소년", "우주소년", "보이즈", "주니어", "아람단"],
   "10대 여성": ["하이틴", "여학생", "새소녀", "영시스터"],
@@ -16,26 +12,13 @@ const titles = {
   "50대 여성": ["건강생활", "주부9단", "선데이서울", "여성중앙", "일요건강"],
 };
 
-export default function TitleMaker() {
-  const [age, setAge] = useState("");
-  const [gender, setGender] = useState("");
-  const [generatedTitle, setGeneratedTitle] = useState("");
-
-  const generateTitle = () => {
-    const key = age + " " + gender;
-    if (titles.hasOwnProperty(key)) {
-      const titleArray = titles[key];
-      const randomIndex = Math.floor(Math.random() * titleArray.length);
-      setGeneratedTitle(titleArray[randomIndex]);
-    } else {
-      setGeneratedTitle("해당하는 제목이 없습니다.");
-    }
-  };
-  const AgeGroupAndGenderMake = (age, genders) => {
+export const titleMaker = features => {
+  let gender = features.gender;
+  let age = features.age;
+  const AgeGroupAndGenderMake = () => {
     let str = age;
-    let gender = "";
     let sum = 0;
-    switch (genders) {
+    switch (gender) {
       case "female":
         gender = "여성";
         break;
@@ -49,23 +32,16 @@ export default function TitleMaker() {
     console.log(`${mok * 10}대 ${gender}`);
     return `${mok * 10}대 ${gender}`;
   };
-
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="나이"
-        value={age}
-        onChange={e => setAge(e.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="성별"
-        value={gender}
-        onChange={e => setGender(e.target.value)}
-      />
-      <button onClick={generateTitle}>만들기</button>
-      <p>{generatedTitle}</p>
-    </div>
-  );
-}
+  const generateTitle = () => {
+    const key = AgeGroupAndGenderMake();
+    if (titles.hasOwnProperty(key)) {
+      const titleArray = titles[key];
+      const randomIndex = Math.floor(Math.random() * titleArray.length);
+      return titleArray[randomIndex];
+    } else {
+      return "해당하는 제목이 없습니다.";
+    }
+  };
+  let res = generateTitle();
+  return res;
+};

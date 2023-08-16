@@ -4,6 +4,7 @@ import Template3 from "../component/templete3";
 import Template4 from "../component/templete4";
 import Template5 from "../component/templete5";
 import Template6 from "../component/templete6";
+import Template7 from "../component/templete7";
 
 import BarcodeItemScreen from "./Barcode";
 import { Fragment, createRef, useEffect, useState } from "react";
@@ -47,6 +48,7 @@ export default function Index() {
   const [imgBase64, setImgBase64] = useState("");
   const [feature, setFeature] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [scrapping, setScrapping] = useState({});
 
   const [img, setImg] = useState(null);
   const [imageSrc, setImageSrc] = useState(null);
@@ -64,37 +66,59 @@ export default function Index() {
     facingMode: "user",
   };
 
-  const RandomTemplate = (num, url, feature) => {
+  useEffect(() => {
+    console.log(scrapping);
+  }, [scrapping]);
+  const RandomTemplate = (num, url, feature, scrapping) => {
     console.log(url);
     switch (num) {
       case 1:
-        return <Template1 url={url} features={feature} />;
+        return (
+          <Template1 url={url} features={feature} scrap_data={scrapping} />
+        );
       case 2:
-        return <Template2 url={url} features={feature} />;
+        return (
+          <Template2 url={url} features={feature} scrap_data={scrapping} />
+        );
       case 3:
-        return <Template3 url={url} features={feature} />;
+        return (
+          <Template3 url={url} features={feature} scrap_data={scrapping} />
+        );
       case 4:
-        return <Template4 url={url} features={feature} />;
+        return (
+          <Template4 url={url} features={feature} scrap_data={scrapping} />
+        );
       case 5:
-        return <Template5 url={url} features={feature} />;
+        return (
+          <Template5 url={url} features={feature} scrap_data={scrapping} />
+        );
       case 6:
-        return <Template6 url={url} features={feature} />;
+        return (
+          <Template6 url={url} features={feature} scrap_data={scrapping} />
+        );
+      case 7:
+        return (
+          <Template7 url={url} features={feature} scrap_data={scrapping} />
+        );
     }
   };
 
-  const getTransferImage = async (data) => {
+  const getTransferImage = async data => {
     regenerateRandomIndex();
-    transferImg(data).then((res) => {
+    transferImg(data).then(res => {
       let { code, data } = res.data;
       if (code === 200) {
         console.log(res.data);
         setImgBase64(data.image[0]); //종합 이미지 결과
         setFeature(data.feature); //clova
+        setScrapping(data.scrap_data); // 스크래핑 데이터
         setIsLoading(false);
-        setTimeout(() => {
-          const objDiv = document.getElementById("mobileWrapper");
-          objDiv.scrollTop = objDiv.scrollHeight;
-        }, 100);
+        if (isMobile) {
+          setTimeout(() => {
+            const objDiv = document.getElementById("mobileWrapper");
+            objDiv.scrollTop = objDiv.scrollHeight;
+          }, 100);
+        }
       } else {
         alert("이미지 변환 실패!!!!");
         console.log("데이터 가져오기 실패");
@@ -180,7 +204,7 @@ export default function Index() {
           text: "Hello World",
           url: "https://shinsangeun.github.io",
         })
-        .then((res) => {
+        .then(res => {
           console.log(res);
         });
     } else {
@@ -232,7 +256,7 @@ export default function Index() {
         type="file"
         id="file"
         accept="image/jpg, image/jpeg, image/png, image/bmp"
-        onChange={(e) => {
+        onChange={e => {
           let reader = new FileReader();
           if (e.target.files[0]) {
             const uploadFile = e.target.files[0];
@@ -254,7 +278,7 @@ export default function Index() {
         type="file"
         id="file2"
         accept="image/jpg, image/jpeg, image/png, image/bmp"
-        onChange={(e) => {
+        onChange={e => {
           console.log(e);
           let reader = new FileReader();
           if (e.target.files[0]) {
@@ -334,7 +358,8 @@ export default function Index() {
               {RandomTemplate(
                 randomIndex,
                 `data:image/png;base64,${imgBase64}`,
-                feature
+                feature,
+                scrapping
               )}
             </div>
             <div style={{ display: "flex" }}>
@@ -429,7 +454,7 @@ export default function Index() {
                 type="file"
                 id="file"
                 accept="image/jpg, image/jpeg, image/png, image/bmp"
-                onChange={(e) => {
+                onChange={e => {
                   let reader = new FileReader();
                   if (e.target.files[0]) {
                     const uploadFile = e.target.files[0];
@@ -499,7 +524,8 @@ export default function Index() {
                       {RandomTemplate(
                         randomIndex,
                         `data:image/png;base64,${imgBase64}`,
-                        feature
+                        feature,
+                        scrapping
                       )}
                     </div>
                     <div

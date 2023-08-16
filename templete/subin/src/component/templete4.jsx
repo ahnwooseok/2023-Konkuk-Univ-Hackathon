@@ -1,6 +1,7 @@
 import "../css/templete4.css";
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
+import { titleMaker } from "./TitleMaker.jsx";
 
 const textPixelChanger = str => {
   let strLen = str.length;
@@ -16,7 +17,14 @@ const textPixelChanger = str => {
   }
 };
 
-export default function Templete4({ url, features }) {
+export default function Templete4({ url, features, scrap_data }) {
+  let data = scrap_data;
+  const [title, setTitle] = useState("");
+  useEffect(() => {
+    let result = titleMaker(features);
+    setTitle(result);
+  }, []);
+  console.log(title);
   return (
     <html>
       <body>

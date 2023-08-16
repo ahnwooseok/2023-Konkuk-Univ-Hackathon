@@ -1,10 +1,17 @@
 import "../css/templete1.css";
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
-export default function Templete1({ url, features }) {
-  
+import { titleMaker } from "./TitleMaker.jsx";
+export default function Templete1({ url, features, scrap_data }) {
+  let data = scrap_data;
+  const [title, setTitle] = useState("");
+  useEffect(() => {
+    let result = titleMaker(features);
+    setTitle(result);
+  }, []);
+  console.log(title);
   return (
-    <div class="templete1" >
+    <div class="templete1">
       <img
         style={{
           position: "absolute",
@@ -16,8 +23,8 @@ export default function Templete1({ url, features }) {
         }}
         src={url}
       />
-      <div class="header"  >
-        <h1 class="title">영레이디</h1>
+      <div class="header">
+        <h1 class="title">{title}</h1>
       </div>
       <div class="left">
         <p id="t1_content1">

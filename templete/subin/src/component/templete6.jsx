@@ -1,8 +1,16 @@
 import "../css/templete6.css";
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
+import { titleMaker } from "./TitleMaker";
 
-export default function Templete6({ url, features }) {
+export default function Templete6({ url, features, scrap_data }) {
+  let data = scrap_data;
+  const [title, setTitle] = useState("");
+  useEffect(() => {
+    let result = titleMaker(features);
+    setTitle(result);
+  }, []);
+  console.log(title);
   return (
     <html>
       <body>
@@ -19,7 +27,7 @@ export default function Templete6({ url, features }) {
             src={url}
           />
           <div class="header">
-            <h1 class="title6">어깨동무</h1>
+            <h1 class="title6">{title}</h1>
           </div>
           <div class="left6">
             <p id="t6_content1">프레시지, 다이어트 도시락 3종 쿠팡 선런칭</p>
@@ -39,7 +47,7 @@ export default function Templete6({ url, features }) {
               동대문엽기떡볶이 '엽포터즈', 복날히든메뉴 '엽기닭볶음탕'
             </p>
           </div>
-       
+
           <BarcodeItemScreen />
         </div>
       </body>
