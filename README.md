@@ -5,7 +5,7 @@
 
 ## 1. 서비스 소개 💻
 
----
+
 
 ### 🎞️ **Retronize - 레트로 잡지와 당신의 얼굴이 만나다**
 
@@ -27,7 +27,7 @@ Retronize는 과거와 현재의 만남을 제공합니다. 고전적인 레트�
 
 ## 2. 서비스 개요 👋
 
----
+
 
 ### 문제 인식
 
@@ -74,7 +74,7 @@ Retronize는 과거와 현재의 만남을 제공합니다. 고전적인 레트�
 
 ## 3. 기능 목차 📔
 
----
+
 
 - 이미지 배경 삭제
 - 이미지 배경 마스킹
@@ -84,7 +84,7 @@ Retronize는 과거와 현재의 만남을 제공합니다. 고전적인 레트�
 
 ## 4. 기능 소개 ✍️
 
----
+
 
 ![Group 26.png](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%20a96bc34cd7db48d099331d35c513f519/Group_26.png)
 
@@ -137,16 +137,16 @@ Retronize는 과거와 현재의 만남을 제공합니다. 고전적인 레트�
 
 ## 5. 기능에 적용된 기술 🛠
 
----
+
 
 ![Group 25.png](%E1%84%8C%E1%85%A6%E1%84%86%E1%85%A9%E1%86%A8%20%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%8B%E1%85%B3%E1%86%B7%20a96bc34cd7db48d099331d35c513f519/Group_25.png)
 
 ## 6. 팀원 소개 👬
 
----
 
-- [201811267 안우석]: [https://github.com/ahnwooseok](https://github.com/binllionaire) - PM, F/E
-- [202111391 황수빈]: [https://github.com/binllionaire](https://github.com/binllionaire) - F/E, Design
-- [201811187 성락현]: [https://github.com/racgoo](https://github.com/racgoo) - AI, Image Processing
-- [201811279 이상돈]: [https://github.com/ssangdon](https://github.com/ssangdon) - AI, Image Processing
-- [201811290 장태용]: [https://github.com/TaeyongCE](https://github.com/TaeyongCE) - B/E, Scrapping
+
+- 201811267 안우석 : [https://github.com/ahnwooseok](https://github.com/binllionaire) - PM, F/E
+- 202111391 황수빈 : [https://github.com/binllionaire](https://github.com/binllionaire) - F/E, Design
+- 201811187 성락현 : [https://github.com/racgoo](https://github.com/racgoo) - AI, Image Processing
+- 201811279 이상돈 : [https://github.com/ssangdon](https://github.com/ssangdon) - AI, Image Processing
+- 201811290 장태용 : [https://github.com/TaeyongCE](https://github.com/TaeyongCE) - B/E, Scrapping
