@@ -28,37 +28,19 @@ export default function Templete1({ url, features, scrap_data }) {
       </div>
       <div class="left">
         <p id="t1_content1">
-          프레시지, 다이어트 <br />
-          도시락 3종 쿠팡 선런칭
+          {data.movie}
+          {/* 프레시지, 다이어트 <br />
+          도시락 3종 쿠팡 선런칭 */}
         </p>
-        <p id="t1_content2">뉴진스, 아이돌그룹 브랜드평판 1위</p>
-        <p id="t1_content3">상온상압 초전도체가 뭐길래</p>
+        <p id="t1_content2">{data.music}</p>
+        <p id="t1_content3">{data.news[0]}</p>
       </div>
       <div class="right">
-        <p id="t1_content4">
-          하트시그널4, '마음 <br />
-          통하는 기적' 일어날까
-        </p>
-        <p id="t1_content5">
-          넷플릭스 '19/20'
-          <br />
-          (열아홉스물) 공개...{" "}
-        </p>
-        <p id="t1_content6">
-          한강 모래사장에
-          <br />
-          선베드 깔린다…
-          <br />
-          '뷰 맛집' 대변신
-        </p>
-        <p id="t1_content7">
-          국민 10명 중 3명 “광복절에 일본 여행, <br />
-          개인의 자유”
-        </p>
-        <p id="t1_content8">
-          동대문엽기떡볶이 '엽포터즈', 복날히든메뉴 <br />
-          '엽기닭볶음탕' 소개
-        </p>
+        <p id="t1_content4">{data.news[1]}</p>
+        <p id="t1_content5">{data.news[2]}</p>
+        <p id="t1_content6">{data.news[3]}</p>
+        <p id="t1_content7">{data.news[4]}</p>
+        <p id="t1_content8">{data.news[5]}</p>
       </div>
       <BarcodeItemScreen />
     </div>
