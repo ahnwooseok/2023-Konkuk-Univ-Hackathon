@@ -41,7 +41,7 @@
 .title7{
     position: relative;
 z-index: 100;
-    color: rgb(0, 134, 183);
+    color: red;
     text-shadow: -3px 0px black, 0px 3px black, 3px 0px black, 0px -3px black;
     font-family: 'batang';
     margin-top: 0px;
