@@ -2,11 +2,22 @@ import "../css/templete3.css";
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
 
-export default function Templete3() {
+export default function Templete3({ url, features }) {
   return (
     <html>
       <body>
         <div class="templete3">
+          <img
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: -1,
+            }}
+            src={url}
+          />
           <div class="header">
             <h1 class="title3">영브라더</h1>
             <p id="num">제 1호</p>

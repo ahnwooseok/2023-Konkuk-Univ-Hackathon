@@ -3,6 +3,8 @@ import Template2 from "../component/templete2";
 import Template3 from "../component/templete3";
 import Template4 from "../component/templete4";
 import Template5 from "../component/templete5";
+import Template6 from "../component/templete6";
+
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
 import faceid from "../img/faceid.png";
@@ -25,15 +27,18 @@ import Webcam from "react-webcam";
 import { Dialog } from "@mui/material";
 import msave from "../img/msave.png";
 import CustomLoading from "../utils/CustomLoading";
+import { transferImg } from "../controller/api.jsx";
 
 export default function Index() {
   const templates = [Template1, Template2, Template3, Template4, Template5];
   const randomIndex = Math.floor(Math.random() * templates.length);
-  const RandomTemplate = templates[randomIndex];
+  //   const RandomTemplate = templates[randomIndex];
   const [selectedGender, setSelectedGender] = useState("");
   const [result, setResult] = useState(false);
   const isMobile = useMobile();
-
+  const [file, setFile] = useState();
+  const [imgBase64, setImgBase64] = useState("");
+  const [feature, setFeature] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [isSecondFlow, setIsSecondFlow] = useState(false);
 
@@ -46,6 +51,35 @@ export default function Index() {
     width: 1280,
     height: 720,
     facingMode: "user",
+  };
+  const RandomTemplate = (num, url, feature) => {
+    switch (num) {
+      case 1:
+        return <Template1 url={url} features={feature} />;
+      case 2:
+        return <Template2 url={url} features={feature} />;
+      case 3:
+        return <Template3 url={url} features={feature} />;
+      case 4:
+        return <Template4 url={url} features={feature} />;
+      case 5:
+        return <Template5 url={url} features={feature} />;
+      case 6:
+        return <Template6 url={url} features={feature} />;
+    }
+  };
+  const getTransferImage = async data => {
+    transferImg(data).then(res => {
+      let { code, data } = res.data;
+      if (code === 200) {
+        setImgBase64(data.image[0]);
+        setFeature(data.feature);
+        setIsLoading(false);
+      } else {
+        alert("이미지 변환 실패!!!!");
+        console.log("데이터 가져오기 실패");
+      }
+    });
   };
 
   const WebcamCapture = () => (
@@ -142,7 +176,25 @@ export default function Index() {
       {result ? <p></p> : <p>설명이 들어갑니다.설명이 들어갑니다.</p>}
       <div className="result-template">
         {isSecondFlow ? (
-          <div>{isLoading ? <CustomLoading /> : <div>변환된 이미지</div>}</div>
+          <div>
+            {!imgBase64 ? (
+              <CustomLoading />
+            ) : (
+              <div>
+                {" "}
+                {/* <img
+                  style={{ width: "300px", height: "400px" }}
+                  src={url}
+                ></img> */}
+                {/* <Template1 url={url} features={feature} /> */}
+                {RandomTemplate(
+                  randomIndex,
+                  `data:image/png;base64,${imgBase64}`,
+                  feature
+                )}
+              </div>
+            )}
+          </div>
         ) : (
           <img id="graybox" src={imageSrc === null ? faceid : imageSrc} />
         )}
@@ -157,6 +209,8 @@ export default function Index() {
           let reader = new FileReader();
           if (e.target.files[0]) {
             reader.readAsDataURL(e.target.files[0]);
+            const uploadFile = e.target.files[0];
+            setFile(uploadFile);
           }
           reader.onloadend = () => {
             const previewImgUrl = reader.result;
@@ -273,10 +327,9 @@ export default function Index() {
             else {
               setIsSecondFlow(true);
               setIsLoading(true);
-              setTimeout(() => {
-                setIsLoading(false);
-                alert("convert complete");
-              }, 3000);
+              const formData = new FormData();
+              formData.append("file", file);
+              getTransferImage(formData);
             }
           }
         }}
@@ -319,9 +372,13 @@ export default function Index() {
                 accept="image/jpg, image/jpeg, image/png, image/bmp"
                 onChange={e => {
                   console.log(e);
+                  console.log(e.target.files[0]);
                   let reader = new FileReader();
                   if (e.target.files[0]) {
+                    const uploadFile = e.target.files[0];
                     reader.readAsDataURL(e.target.files[0]);
+
+                    setFile(uploadFile);
                   }
                   reader.onloadend = () => {
                     const previewImgUrl = reader.result;
@@ -355,10 +412,14 @@ export default function Index() {
               else {
                 setIsSecondFlow(true);
                 setIsLoading(true);
-                setTimeout(() => {
-                  setIsLoading(false);
-                  alert("convert complete");
-                }, 3000);
+                // console.log(file);
+                const formData = new FormData();
+                formData.append("file", file);
+                getTransferImage(formData);
+                // setTimeout(() => {
+                //   setIsLoading(false);
+                //   alert("convert complete");
+                // }, 3000);
               }
             }}
           >
@@ -368,8 +429,10 @@ export default function Index() {
         <div style={{ width: "40px" }} />
         {isSecondFlow ? (
           <div style={{ backgroundColor: "transparent", width: "100%" }}>
-            {isLoading ? (
-              <CustomLoading />
+            {!imgBase64 ? (
+              <>
+                <CustomLoading />
+              </>
             ) : (
               <div>
                 <div
@@ -382,10 +445,19 @@ export default function Index() {
                     marginBottom: "50px",
                   }}
                 >
-                  <img
+                  {/* <img
                     style={{ width: "300px", height: "400px" }}
-                    src={imageSrc}
-                  />
+                    src={`data:image/png;base64,${imgBase64}`}
+                  ></img> */}
+                  {RandomTemplate(
+                    randomIndex,
+                    `data:image/png;base64,${imgBase64}`,
+                    feature
+                  )}
+                  {/* <Template1
+                    url={`data:image/png;base64,${imgBase64}`}
+                    features={feature}
+                  /> */}
                 </div>
                 <div
                   style={{
@@ -440,11 +512,12 @@ export default function Index() {
           </div>
         ) : (
           <Marquee>
-            <Template1 />
+            {/* <Template1 />
             <Template2 />
             <Template3 />
             <Template4 />
-            <Template5 />
+            <Template5 /> */}
+            {/* <RandomTemplate /> */}
           </Marquee>
         )}
       </div>
