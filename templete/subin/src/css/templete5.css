@@ -12,9 +12,10 @@
     margin-top: 0px;
     writing-mode: vertical-rl;
     width: 50px;
-    height: 390px;
+    height: 410px;
+    padding-left: 10px;
     padding-right: 10px;
-    padding-top: 150px;
+    padding-top: 130px;
     float: right;
     position: absolute;
     left: 0px;
@@ -28,6 +29,7 @@
     width: 65%;
     margin-left: 60px;
     margin-top: 200px;
+    
    
 }
 .t5_sec3{
@@ -78,16 +80,23 @@
     text-align:left;
     top: 100px;
     font-family: 'chosunB';
-    font-size: 40px;
+    font-size: 22px;
+    height: 350px;
     writing-mode: vertical-rl;
     display: inline-block;
 }
 #t5_content2{
     font-family: 'batang';
     transform:rotate(-10deg);
-    font-size: 28px;
+    font-size: 16px;
     color: #376d91;
     margin-bottom: 5px;
+    overflow: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
    
 }
@@ -97,14 +106,20 @@
     text-shadow: -1px 0px #c82a2a, 0px 1px #c82a2a, 1px 0px #c82a2a, 0px -1px #c82a2a;
     margin-bottom: 5px;
     font-family: 'batang';
-    font-size: 28px;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     transform:rotate(-10deg);
    
 }
 #t5_content4{
-    font-size: 24px;
+    font-size: 19px;
     margin-bottom: 5px;
     transform:rotate(-10deg);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
     font-family: 'batang';
     color: rgb(0, 0, 109);
@@ -112,41 +127,52 @@
 #t5_content5{
     font-family: 'batang';
     transform:rotate(-10deg);
-    font-size: 28px;
+    font-size: 16px;
     color: #376d91;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin-bottom: 5px;
     text-shadow: -1px 0px white, 0px 1px white, 1px 0px white, 0px -1px white;
 }
 #t5_content6{
   
-    font-size: 32px;
+    font-size: 24px;
    background-color: #d52020;
   height: 300px;
+  
     font-family: 'batang';
     color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #t5_content7{
    
-    font-size: 32px;
+    font-size: 24px;
     font-family: 'batang';
-    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     height: 300px;
     background-color: rgb(255, 234, 0);
     
 }
 #t5_content8{
-    font-size: 32px;
+    font-size: 24px;
     font-family: 'batang';
     color: white;
     height: 300px;
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     background-color: #2500cc;
 }
 
 #t5_content9{
     text-shadow: 2px 2px 2px black;
     font-family: 'chosunB';
-    font-size: 40px;
+    font-size: 20px;
     color: white;
     writing-mode: vertical-rl;
     display: inline-block;

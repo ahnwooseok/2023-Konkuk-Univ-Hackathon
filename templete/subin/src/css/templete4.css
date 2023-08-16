@@ -10,20 +10,20 @@
 .sec1{
     width: auto;
     height: 230px;
-    
     margin-top: 20px;
     float: inline-start;
     position: absolute;
     left: 0;
     margin-bottom: 0px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 0px;
     writing-mode: vertical-rl;
 }
 .sec2{
     position: absolute;
     bottom: 20px;
-    width: 70%;
+    right :120px;
+    width: 50%;
     margin-top: 250px;
     text-align: end;
 }
@@ -53,8 +53,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    -webkit-filter: sepia(20%);
-    filter: sepia(20%);
+    -webkit-filter: sepia(40%);
+    filter: sepia(40%);
     z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
    
 }
@@ -76,7 +76,7 @@ z-index: 100;
 
 #t4_content1{
     font-family: 'chosunB';
-    font-size: 22px;
+    font-size: 20px;
     color: white;
     height: 250px;
     writing-mode: vertical-rl;
@@ -86,7 +86,7 @@ z-index: 100;
 }
 #t4_content2{
     font-family: 'chosunB';
-    font-size: 22px;
+    font-size: 20px;
     color: yellow;
     height: 250px;
     writing-mode: vertical-rl;
@@ -98,7 +98,7 @@ z-index: 100;
     color: #e9c2e0;
     height: 250px;
     font-family: 'chosunB';
-    font-size: 24px;
+    font-size: 20px;
     writing-mode: vertical-rl;
     display: inline-block;
     
