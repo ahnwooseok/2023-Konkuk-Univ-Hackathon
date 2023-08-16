@@ -25,6 +25,9 @@ export const titleMaker = features => {
       case "male":
         gender = "남성";
         break;
+      default:
+        gender = "남성";
+        break;
     }
     let splited = str.split("~").map(d => parseInt(d));
     splited.map(data => (sum += data));

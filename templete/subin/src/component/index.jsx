@@ -61,8 +61,8 @@ export default function Index() {
   });
 
   const videoConstraints = {
-    width: 1280,
-    height: 720,
+    width: 520,
+    height: 800,
     facingMode: "user",
   };
 
@@ -176,6 +176,7 @@ export default function Index() {
             border: "none",
             borderRadius: "5px",
             color: "white",
+            marginTop: "15px",
           }}
         >
           촬영
@@ -433,8 +434,7 @@ export default function Index() {
             레트로 잡지 표지 생성기
           </h1>
           <p id="main-subtitle">
-            설명이 들어갑니다.설명이 들어갑니다. 설명이 들어갑니다.설명이
-            들어갑니다.
+            사진은 본인이 상반신 또는 전신샷이 들어가도록 해주세요.
           </p>
           <div
             className="file"
@@ -574,7 +574,6 @@ export default function Index() {
             )}
           </div>
         </div>
-
         <div style={{ width: "40px" }} />
       </div>
 
