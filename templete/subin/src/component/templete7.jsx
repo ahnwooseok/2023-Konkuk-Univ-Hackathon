@@ -14,7 +14,7 @@ export default function Templete7({ url, features }) {
               left: 0,
               width: "100%",
               height: "100%",
-              zIndex: -1,
+              zIndex: 0,
             }}
             src={url}
           />
