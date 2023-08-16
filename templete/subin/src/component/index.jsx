@@ -8,6 +8,11 @@ import Template7 from "../component/templete7";
 
 import BarcodeItemScreen from "./Barcode";
 import { Fragment, createRef, useEffect, useState } from "react";
+import team1 from "../img/1.png";
+import team2 from "../img/2.png";
+import team3 from "../img/3.png";
+import team4 from "../img/4.png";
+import team5 from "../img/5.png";
 import faceid from "../img/faceid.png";
 import upload from "../img/upload.png";
 import camera from "../img/camera.png";
@@ -44,6 +49,7 @@ export default function Index() {
   const [selectedGender, setSelectedGender] = useState("");
   const [result, setResult] = useState(false);
   const isMobile = useMobile();
+  const [isFinish, setIsFinish] = useState(false);
 
   const [imgBase64, setImgBase64] = useState("");
   const [feature, setFeature] = useState({});
@@ -345,55 +351,57 @@ export default function Index() {
 
       {isLoading ? (
         <CustomLoading />
+      ) : imgBase64 == "" ? (
+        <div>
+          <div>12312312</div>
+        </div>
       ) : (
-        imgBase64 !== "" && (
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <div ref={ref} style={{ transform: `scale(${size.width / 440})` }}>
-              {RandomTemplate(
-                randomIndex,
-                `data:image/png;base64,${imgBase64}`,
-                feature,
-                scrapping
-              )}
-            </div>
-            <div style={{ display: "flex" }}>
-              <a
-                id="image-save"
-                style={{
-                  border: "none",
-                  width: "150px",
-                  height: "40px",
-                  color: "transparent",
-                  display: "inline-block",
-                }}
-                download="karina.jpg"
-                onClick={handleSave}
-              >
-                이미지 저장
-              </a>
-              <a
-                id="mbtn"
-                style={{
-                  border: "none",
-                  width: "150px",
-                  height: "40px",
-                  color: "transparent",
-                  display: "inline-block",
-                }}
-                onClick={() => {
-                  handleShare();
-                }}
-              />
-            </div>
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <div ref={ref} style={{ transform: `scale(${size.width / 440})` }}>
+            {RandomTemplate(
+              randomIndex,
+              `data:image/png;base64,${imgBase64}`,
+              feature,
+              scrapping
+            )}
           </div>
-        )
+          <div style={{ display: "flex" }}>
+            <a
+              id="image-save"
+              style={{
+                border: "none",
+                width: "150px",
+                height: "40px",
+                color: "transparent",
+                display: "inline-block",
+              }}
+              download="karina.jpg"
+              onClick={handleSave}
+            >
+              이미지 저장
+            </a>
+            <a
+              id="mbtn"
+              style={{
+                border: "none",
+                width: "150px",
+                height: "40px",
+                color: "transparent",
+                display: "inline-block",
+              }}
+              onClick={() => {
+                handleShare();
+              }}
+            />
+          </div>
+        </div>
       )}
 
       <Dialog
@@ -512,7 +520,51 @@ export default function Index() {
               <CustomLoading />
             ) : (
               <div>
-                {imgBase64 !== "" && (
+                {imgBase64 == "" ? (
+                  <Marquee>
+                    <div>
+                      <img
+                        style={{
+                          width: "300px",
+                          height: "400px",
+                          marginRight: "35px",
+                        }}
+                        src={team1}
+                      />
+                      <img
+                        style={{
+                          width: "300px",
+                          height: "400px",
+                          marginRight: "35px",
+                        }}
+                        src={team2}
+                      />
+                      <img
+                        style={{
+                          width: "300px",
+                          height: "400px",
+                          marginRight: "35px",
+                        }}
+                        src={team3}
+                      />
+                      <img
+                        style={{
+                          width: "300px",
+                          height: "400px",
+                          marginRight: "35px",
+                        }}
+                        src={team4}
+                      />
+                      <img
+                        style={{
+                          width: "300px",
+                          height: "400px",
+                        }}
+                        src={team5}
+                      />
+                    </div>
+                  </Marquee>
+                ) : (
                   <div
                     style={{
                       display: "flex",

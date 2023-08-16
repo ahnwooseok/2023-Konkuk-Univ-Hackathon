@@ -1,161 +1,151 @@
 .templete4 {
-    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
-    position: relative;
-    width: 400px;
-    height: 500px;
-    padding: 20px;
-    margin: 0px auto 0 auto;
-
+  box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5),
+    10px 10px 10px rgba(18, 0, 0, 0.4);
+  position: relative;
+  width: 400px;
+  height: 500px;
+  padding: 20px;
+  margin: 0px auto 0 auto;
 }
-.sec1{
-    width: auto;
-    height: 230px;
-    margin-top: 20px;
-    float: inline-start;
-    position: absolute;
-    left: 0;
-    margin-bottom: 0px;
-    margin-left: 10px;
-    margin-right: 0px;
-    writing-mode: vertical-rl;
+.sec1 {
+  width: auto;
+  height: 230px;
+  margin-top: 105px;
+  float: inline-start;
+  position: absolute;
+  left: 0;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 0px;
+  writing-mode: vertical-rl;
 }
-.sec2{
-    position: absolute;
-    bottom: 20px;
-    right :120px;
-    width: 50%;
-    margin-top: 250px;
-    text-align: end;
+.sec2 {
+  position: absolute;
+  bottom: 20px;
+  right: 120px;
+  width: 50%;
+  margin-top: 250px;
+  text-align: end;
 }
-.sec3{
-    writing-mode: vertical-rl;
-    width: 80px;
-    height: 390px;
-    padding-left: 10px;
-    padding-right: 5px;
-    padding-top: 120px;
-    float: right;
-    position: absolute;
-    right: 0px;
-    top:0px;
-    background-color: #07bc5d;
-    
+.sec3 {
+  writing-mode: vertical-rl;
+  width: 80px;
+  height: 390px;
+  padding-left: 10px;
+  padding-right: 5px;
+  padding-top: 120px;
+  float: right;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #07bc5d;
 }
 
 .templete4:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('../img/bgi4.jpeg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    -webkit-filter: sepia(40%);
-    filter: sepia(40%);
-    z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
-   
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/bgi4.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-filter: sepia(40%);
+  filter: sepia(40%);
+  z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
 }
 
-.templete4 p{
-    margin: 0px;
+.templete4 p {
+  margin: 0px;
 }
-.title4{
-    position: relative;
-z-index: 100;
-    color: #ff2020;
-    text-shadow: -3px 0px white, 0px 3px white, 3px 0px white, 0px -3px white;
-    font-family: 'pado';
-    margin-top: 0px;
-    text-align: center;
-    font-size: 80px;
-    margin: 0;
-}
-
-#t4_content1{
-    font-family: 'chosunB';
-    font-size: 20px;
-    color: white;
-    height: 250px;
-    writing-mode: vertical-rl;
-    display: inline-block;
-    
-    
-}
-#t4_content2{
-    font-family: 'chosunB';
-    font-size: 20px;
-    color: yellow;
-    height: 250px;
-    writing-mode: vertical-rl;
-    display: inline-block;
-    
+.title4 {
+  position: relative;
+  z-index: 100;
+  color: #ff2020;
+  text-shadow: -3px 0px white, 0px 3px white, 3px 0px white, 0px -3px white;
+  font-family: "pado";
+  margin-top: 0px;
+  text-align: center;
+  font-size: 80px;
+  margin: 0;
+  margin-right: 45px;
 }
 
-#t4_content3{
-    color: #e9c2e0;
-    height: 250px;
-    font-family: 'chosunB';
-    font-size: 20px;
-    writing-mode: vertical-rl;
-    display: inline-block;
-    
+#t4_content1 {
+  font-family: "chosunB";
+  font-size: 20px;
+  color: white;
+  height: 250px;
+  writing-mode: vertical-rl;
+  display: inline-block;
+}
+#t4_content2 {
+  font-family: "chosunB";
+  font-size: 16px;
+  color: yellow;
+  height: 250px;
+  writing-mode: vertical-rl;
+  display: inline-block;
 }
 
-#t4_content4{
-   
-    font-size: 16px;
-   background-color: #cc0066;
-   display: inline;
+#t4_content3 {
+  color: #e9c2e0;
+  height: 250px;
+  font-family: "chosunB";
+  font-size: 18px;
+  writing-mode: vertical-rl;
+  display: inline-block;
+}
 
-    font-family: 'batang';
-    color: white;
+#t4_content4 {
+  font-size: 16px;
+  background-color: #cc0066;
+  display: inline;
+
+  font-family: "batang";
+  color: white;
 }
-#t4_content5{
-   
-    font-size: 20px;
-    font-family: 'chosunB';
-    color: #3ef8ff;
-    
+#t4_content5 {
+  font-size: 20px;
+  font-family: "chosunB";
+  color: #3ef8ff;
 }
-#t4_content6{
-   
-    font-size: 16px;
-    font-family: 'chosunB';
-    color: yellow;
+#t4_content6 {
+  font-size: 16px;
+  font-family: "chosunB";
+  color: yellow;
 }
 #t4_content7 {
-    text-shadow: 2px 2px 2px black;
-    font-family: 'chosunB';
-    font-size: 28px;
-    padding-right: 10px;
-    color: white;
-    writing-mode: vertical-rl;
-    display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    height: 360px;
+  text-shadow: 2px 2px 2px black;
+  font-family: "chosunB";
+  font-size: 28px;
+  padding-right: 10px;
+  color: white;
+  writing-mode: vertical-rl;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 360px;
 }
-#t4_content8{
-    text-shadow: 2px 2px 2px black;
-    font-family: 'chosunB';
-    font-size: 28px;
-    color: white;
-    writing-mode: vertical-rl;
-    display: inline-block;
-    overflow: hidden;
-    
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    height: 360px;
-    
+#t4_content8 {
+  text-shadow: 2px 2px 2px black;
+  font-family: "chosunB";
+  font-size: 28px;
+  color: white;
+  writing-mode: vertical-rl;
+  display: inline-block;
+  overflow: hidden;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 360px;
 }
 
-.barcode{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+.barcode {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
