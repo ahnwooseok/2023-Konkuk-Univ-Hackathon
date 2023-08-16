@@ -28,9 +28,13 @@ const AgeGroupAndGenderMake = (age, genders) => {
   }
   let splited = str.split("~").map(d => parseInt(d));
   splited.map(data => (sum += data));
-  let mok = parseInt(sum / 2 / 10);
-  console.log(`${mok * 10}대 ${gender}`);
-  return `${mok * 10}대 ${gender}`;
+  let ages = 0;
+  parseInt(sum / 2 / 10) * 10 >= 60
+    ? (ages = 50)
+    : (ages = parseInt(sum / 2 / 10) * 10);
+
+  console.log(`${ages}대 ${gender}`);
+  return `${ages}대 ${gender}`;
 };
 
-AgeGroupandGenderMake("20~26", "female");
+AgeGroupAndGenderMake("20~30", "female");
