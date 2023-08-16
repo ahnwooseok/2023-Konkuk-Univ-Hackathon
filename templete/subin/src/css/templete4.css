@@ -8,29 +8,32 @@
 
 }
 .sec1{
-    width: 110px;
+    width: auto;
     height: 230px;
+    
     margin-top: 20px;
     float: inline-start;
     position: absolute;
     left: 0;
-    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
     margin-right: 0px;
     writing-mode: vertical-rl;
 }
 .sec2{
     position: absolute;
     bottom: 20px;
-    width: 65%;
+    width: 70%;
     margin-top: 250px;
     text-align: end;
 }
 .sec3{
     writing-mode: vertical-rl;
-    width: 100px;
+    width: 80px;
     height: 390px;
-    padding-right: 15px;
-    padding-top: 150px;
+    padding-left: 10px;
+    padding-right: 5px;
+    padding-top: 120px;
     float: right;
     position: absolute;
     right: 0px;
@@ -57,7 +60,7 @@
 }
 
 .templete4 p{
-    margin: 1px;
+    margin: 0px;
 }
 .title4{
     position: relative;
@@ -72,35 +75,41 @@ z-index: 100;
 }
 
 #t4_content1{
-    text-align:left;
-    top: 100px;
-    color: black;
     font-family: 'chosunB';
-    font-size: 28px;
+    font-size: 22px;
+    color: white;
+    height: 250px;
     writing-mode: vertical-rl;
     display: inline-block;
+    
+    
 }
 #t4_content2{
     font-family: 'chosunB';
-    font-size: 28px;
+    font-size: 22px;
     color: yellow;
+    height: 250px;
     writing-mode: vertical-rl;
     display: inline-block;
+    
 }
 
 #t4_content3{
     color: #e9c2e0;
+    height: 250px;
     font-family: 'chosunB';
-    font-size: 28px;
+    font-size: 24px;
     writing-mode: vertical-rl;
     display: inline-block;
+    
 }
 
 #t4_content4{
    
-    font-size: 32px;
+    font-size: 16px;
    background-color: #cc0066;
    display: inline;
+
     font-family: 'batang';
     color: white;
 }
@@ -113,27 +122,35 @@ z-index: 100;
 }
 #t4_content6{
    
-    font-size: 32px;
+    font-size: 16px;
     font-family: 'chosunB';
     color: yellow;
 }
-#t4_content7{
+#t4_content7 {
     text-shadow: 2px 2px 2px black;
     font-family: 'chosunB';
-    font-size: 40px;
+    font-size: 28px;
+    padding-right: 10px;
     color: white;
     writing-mode: vertical-rl;
     display: inline-block;
-    height: 350px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 360px;
 }
 #t4_content8{
     text-shadow: 2px 2px 2px black;
     font-family: 'chosunB';
-    font-size: 40px;
+    font-size: 28px;
     color: white;
     writing-mode: vertical-rl;
     display: inline-block;
-    height: 350px;
+    overflow: hidden;
+    
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 360px;
     
 }
 
