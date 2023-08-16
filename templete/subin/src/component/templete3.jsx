@@ -8,7 +8,7 @@ export default function Templete3() {
       <body>
         <div class="templete3">
           <div class="header">
-            <h1 class="title3">영브라더요</h1>
+            <h1 class="title3">영브라더</h1>
             <p id="num">제 1호</p>
           </div>
           <div class="left3">
