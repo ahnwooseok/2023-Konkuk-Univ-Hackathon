@@ -9,7 +9,7 @@
   margin: 50px auto 0 auto;
 }
 .left3 {
-  bottom: 50px;
+  bottom: 80px;
   position: absolute;
   width: 50%;
   float: left;
@@ -25,8 +25,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  -webkit-filter: sepia(20%);
-  filter: sepia(20%);
+  -webkit-filter: sepia(40%);
+  filter: sepia(40%);
   z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
 }
 .templete3 p {
@@ -41,6 +41,10 @@
   text-align: center;
   font-size: 80px;
   margin: 0;
+}
+.right3{
+    margin-top: 50px;
+    width: 50%;
 }
 #num {
   color: #fafa37;
@@ -82,7 +86,7 @@
 }
 #t3_content5 {
   transform: rotate(-20deg);
-  font-size: 14px;
+  font-size: 12px;
 
   font-family: "batang";
   color: #3ef8ff;

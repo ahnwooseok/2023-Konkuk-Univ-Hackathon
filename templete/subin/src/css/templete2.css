@@ -19,8 +19,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    -webkit-filter: sepia(20%);
-    filter: sepia(20%);
+    -webkit-filter: sepia(40%);
+    filter: sepia(40%);
     z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
 }
 .templete2 p{
