@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+
+
+
 const titles = {
     "10대 남성": [
       "새소년",
@@ -83,6 +86,24 @@ export default function TitleMaker() {
     } else {
       setGeneratedTitle("해당하는 제목이 없습니다.");
     }
+  };
+  const AgeGroupAndGenderMake = (age, genders) => {
+    let str = age;
+    let gender = "";
+    let sum = 0;
+    switch (genders) {
+      case "female":
+        gender = "여성";
+        break;
+      case "male":
+        gender = "남성";
+        break;
+    }
+    let splited = str.split("~").map(d => parseInt(d));
+    splited.map(data => (sum += data));
+    let mok = parseInt(sum / 2 / 10);
+    console.log(`${mok * 10}대 ${gender}`);
+    return `${mok * 10}대 ${gender}`;
   };
 
   return (

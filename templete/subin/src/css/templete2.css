@@ -19,8 +19,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    -webkit-filter: sepia(40%);
-    filter: sepia(40%);
+    -webkit-filter: sepia(50%);
+    filter: sepia(50%);
     z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
 }
 .templete2 p{
@@ -35,7 +35,7 @@
      float: right;
 }
 .title2{
-    color: #FC46AA;
+    color: rgb(0, 182, 0);
     text-shadow: -3px 0px black, 0px 3px black, 3px 0px black, 0px -3px black;
     font-family: 'classic';
     margin-top: 0px;
@@ -56,7 +56,7 @@
 #t2_content2{
     font-family: 'chosunB';
     font-size: 24px;
-    color: #fa8ee5;
+    color:orangered;
 }
 
 #t2_content3{
@@ -84,7 +84,7 @@
 #t2_content7{
     font-size: 22px;
     font-family: 'chosunB';
-    color: #E11584;
+    color: #004cff;
 }
 #t2_content8{
     font-family: 'chosunB';
