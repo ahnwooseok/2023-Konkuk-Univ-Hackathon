@@ -9,3 +9,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.header {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
