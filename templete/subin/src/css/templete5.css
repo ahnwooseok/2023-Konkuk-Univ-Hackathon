@@ -5,7 +5,7 @@
     width: 400px;
     height: 500px;
     padding: 20px;
-    margin: 50px auto 0 auto;
+    margin: 0px auto 0 auto;
 
 }
 .t5_sec1{
@@ -57,8 +57,8 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    -webkit-filter: sepia(40%);
-    filter: sepia(40%);
+    -webkit-filter: sepia(30%);
+    filter: sepia(30%);
     z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
     
 }

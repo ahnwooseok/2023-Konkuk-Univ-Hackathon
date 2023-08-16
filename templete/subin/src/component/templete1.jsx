@@ -2,8 +2,9 @@ import "../css/templete1.css";
 import BarcodeItemScreen from "./Barcode";
 import { useEffect, useState } from "react";
 export default function Templete1({ url, features }) {
+  
   return (
-    <div class="templete1">
+    <div class="templete1" >
       <img
         style={{
           position: "absolute",
@@ -11,11 +12,11 @@ export default function Templete1({ url, features }) {
           left: 0,
           width: "100%",
           height: "100%",
-          zIndex: -1,
+          zIndex: 0,
         }}
         src={url}
       />
-      <div class="header">
+      <div class="header"  >
         <h1 class="title">영레이디</h1>
       </div>
       <div class="left">

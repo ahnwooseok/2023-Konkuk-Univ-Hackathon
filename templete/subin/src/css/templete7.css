@@ -1,0 +1,120 @@
+.templete7 {
+    box-shadow: inset 10px 0px 15px -1px rgba(28, 0, 0, 0.5), 10px 10px 10px rgba(18, 0, 0, 0.4);
+    position: relative;
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    margin: 0px auto 0 auto;
+}
+.templete7  p{
+    margin: 0;
+}
+.left7 {
+    bottom: 20px;
+    position: absolute;
+    width: 50%;
+    float: left;
+  }
+
+
+.templete7:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bgi4.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: sepia(40%);
+    filter: sepia(40%);
+    z-index: -1; /* 배경 이미지를 내용 아래로 이동시킴 */
+   
+}
+
+.templete6 p{
+    margin: 0px;
+}
+
+.title7{
+    position: relative;
+z-index: 100;
+    color: red;
+    text-shadow: -3px 0px black, 0px 3px black, 3px 0px black, 0px -3px black;
+    font-family: 'batang';
+    margin-top: 0px;
+    text-align: center;
+    font-size: 80px;
+    margin: 0;
+}
+
+#t7_content1{
+    top: 100px;
+    color: red;
+    width: 50px;
+    font-family: 'chosunB';
+    font-size: 10px;
+    
+}
+#t7_content2{
+    font-family: 'chosunB';
+    font-size: 12px;
+    width: 80px;
+    color: orange;
+}
+
+#t7_content3{
+    color: rgb(255, 238, 0);
+    font-family: 'chosunB';
+    width: 110px;
+    font-size: 14px;
+}
+#t7_content4{
+    font-size: 16px;
+    width: 140px;
+    font-family: 'chosunB';
+    color: rgb(0, 163, 8);
+}
+#t7_content5{
+    font-size: 18px;
+    color: rgb(0, 208, 255);
+    width: 170px;
+    font-family: 'chosunB';
+    
+}
+#t7_content6{
+    font-size: 20px;
+    width: 200px;
+    font-family: 'chosunB';
+    color:#0019da;
+    
+}
+#t7_content7{
+    font-size: 22px;
+    width: 230px;
+    font-family: 'chosunB';
+    color: rgb(68, 0, 254);
+    
+}
+#t7_content8{
+    width: 260px;
+    font-family: 'chosunB';
+    font-size: 24px;
+    color: rgb(255, 0, 212);
+}
+#t6_content9{
+    font-family: 'chosunB';
+    font-size: 14px;
+    color: #cc00cc;
+    
+}
+#t6_content10{
+    font-family: 'chosunB';
+    font-size: 32px;
+    color: #cc0066;
+    margin-bottom: 20px;
+    
+}
+  
